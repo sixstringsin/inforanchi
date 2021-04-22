@@ -1517,8 +1517,3 @@ section {
 #footer .credits {
   font-size: 13px;
 }
-
-iframe {
-  margin-top: -30px; /* Cut off top bar */
-  margin-bottom: -30px; /* Cut off bottom bar */
-}
