@@ -222,10 +222,8 @@
 <!--Recaptcha v2-->
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <script type="text/javascript">
-    //var onloadCallback = (function() {
           grecaptcha.ready(function() {
           console.log("grecaptcha ready");
-          //grecaptcha.reset();
             grecaptcha.render('main', {
               'sitekey' : '6LcNe7UaAAAAAASv__v8JKaqxbDta8w5pzl6t3tK',
               'callback' : function(response){console.log(response);}
@@ -233,9 +231,6 @@
           });   
   </script>
   <!--Recaptcha v2-->
-  <!--Recaptcha v2--
-
-<!--Recaptcha v2-->
 </body>
 
 </html>
