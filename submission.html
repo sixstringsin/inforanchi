@@ -226,7 +226,9 @@
 <script src="https://www.google.com/recaptcha/api.js"></script>
     function pollrecaptchafunc(){
         if (!window.grecaptcha) {
+          console.log("grecaptcha loaded"):
           grecaptcha.ready(function() {
+console.log("grecaptcha ready"):
           //grecaptcha.reset();
             grecaptcha.render('main', {
               'sitekey' : '6LcNe7UaAAAAAASv__v8JKaqxbDta8w5pzl6t3tK',
