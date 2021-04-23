@@ -223,7 +223,7 @@
   <script type="text/javascript">
     //var onloadCallback = (function() {
     function pollrecaptchafunc(){
-        if (grecaptcha) {
+        if (grecaptcha!=undefined) {
           grecaptcha.ready(function() {
           //grecaptcha.reset();
             grecaptcha.render('main', {
