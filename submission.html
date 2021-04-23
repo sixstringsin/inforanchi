@@ -2,6 +2,25 @@
 <html lang="en">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9F57RSLDPP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9F57RSLDPP');
+</script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!--Recaptcha v2-->
+  <script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('main', {
+          'sitekey' : '6LcNe7UaAAAAAASv__v8JKaqxbDta8w5pzl6t3tK'
+        });
+      };
+  </script>
+  <!--Recaptcha v2-->
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -208,7 +227,12 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  
+  <!--Recaptcha v2-->
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+<!--Recaptcha v2-->
 </body>
 
 </html>
