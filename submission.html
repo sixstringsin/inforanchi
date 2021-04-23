@@ -15,7 +15,8 @@
   <!--Recaptcha v2-->
   <script type="text/javascript">
     //grecaptcha.ready(function() {
-    var onloadCallback = (function() { 
+    var onloadCallback = (function() {
+      grecaptcha.reset();
         grecaptcha.render('main', {
           'sitekey' : '6LcNe7UaAAAAAASv__v8JKaqxbDta8w5pzl6t3tK',
           'callback' : function(response){console.log(response);}
