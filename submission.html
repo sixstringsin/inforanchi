@@ -222,13 +222,23 @@
 <!--Recaptcha v2-->
   <script type="text/javascript">
     //var onloadCallback = (function() {
-    grecaptcha.ready(function() {
-      //grecaptcha.reset();
-        grecaptcha.render('main', {
-          'sitekey' : '6LcNe7UaAAAAAASv__v8JKaqxbDta8w5pzl6t3tK',
-          'callback' : function(response){console.log(response);}
-        });
-      });
+    function pollrecaptchafunc(){
+        if (grecaptcha) {
+          grecaptcha.ready(function() {
+          //grecaptcha.reset();
+            grecaptcha.render('main', {
+              'sitekey' : '6LcNe7UaAAAAAASv__v8JKaqxbDta8w5pzl6t3tK',
+              'callback' : function(response){console.log(response);}
+            });
+          });
+          } else {
+            grecaptchatimeout = setTimeout(pollrecaptchafunc, 300); // try again in 300 milliseconds
+              if (grecaptcha) {
+                clearTimeout(grecaptchatimeout);
+              }                    
+          }                
+    }
+    $(document).ready(pollrecaptchafunc());
   </script>
   <!--Recaptcha v2-->
   <!--Recaptcha v2--
