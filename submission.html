@@ -224,25 +224,14 @@
     //var onloadCallback = (function() {
     //<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 <script src="https://www.google.com/recaptcha/api.js"></script>
-    function pollrecaptchafunc(){
-        if (!window.grecaptcha) {
-          console.log("grecaptcha loaded"):
           grecaptcha.ready(function() {
-console.log("grecaptcha ready"):
+          console.log("grecaptcha ready"):
           //grecaptcha.reset();
             grecaptcha.render('main', {
               'sitekey' : '6LcNe7UaAAAAAASv__v8JKaqxbDta8w5pzl6t3tK',
               'callback' : function(response){console.log(response);}
             });
-          });
-          } else {
-            grecaptchatimeout = setTimeout(pollrecaptchafunc, 300); // try again in 300 milliseconds
-              if (grecaptcha) {
-                clearTimeout(grecaptchatimeout);
-              }                    
-          }                
-    }
-    $(document).ready(pollrecaptchafunc());
+          });   
   </script>
   <!--Recaptcha v2-->
   <!--Recaptcha v2--
