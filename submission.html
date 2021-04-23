@@ -167,11 +167,11 @@
 
     </div>
   </section>--><!-- End Hero -->
-
   <main id="main">
 
     <!-- ======= Featured Services Section ======= -->
     <!--<section id="featured-services" class="featured-services section-bg">-->
+    <div id="recaptchacontainer"></div>
     <section style="height:1080px">
       <div style="height:100%">
         <iframe id="pageframe" width="100%" height="100%" src="https://docs.google.com/forms/d/e/1FAIpQLSc7A7rtR_bET-_3a5yHYjmcmT0kcycIqbLxXksuNbfgh4tfpg/viewform?embedded=true" width="640" height="952" frameborder="0" marginheight="0" marginwidth="0"></iframe>
@@ -224,7 +224,7 @@
 <script type="text/javascript">
           grecaptcha.ready(function() {
           console.log("grecaptcha ready");
-            grecaptcha.render('main', {
+            grecaptcha.render('recaptchacontainer', {
               'sitekey' : '6LcNe7UaAAAAAASv__v8JKaqxbDta8w5pzl6t3tK',
               'callback' : function(response){console.log(response);}
             });
