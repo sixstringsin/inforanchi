@@ -16,7 +16,8 @@
   <script type="text/javascript">
       var onloadCallback = function() {
         grecaptcha.render('main', {
-          'sitekey' : '6LcNe7UaAAAAAASv__v8JKaqxbDta8w5pzl6t3tK'
+          'sitekey' : '6LcNe7UaAAAAAASv__v8JKaqxbDta8w5pzl6t3tK',
+          'callback' : function(response){console.log(response);}
         });
       };
   </script>
@@ -229,9 +230,7 @@
   <script src="assets/js/main.js"></script>
   
   <!--Recaptcha v2-->
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
-    </script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 <!--Recaptcha v2-->
 </body>
 
