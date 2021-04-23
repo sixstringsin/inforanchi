@@ -172,8 +172,8 @@
     <!-- ======= Featured Services Section ======= -->
     <!--<section id="featured-services" class="featured-services section-bg">-->
     <section style="height:1080px;">
-      <div id="recaptchacontainer"></div>
-      <div id="submitform" style="height:100%;display:none">
+      <!--div id="recaptchacontainer"></div-->
+      <div id="submitform" style="height:100%">
         <iframe id="pageframe" width="100%" height="100%" src="https://docs.google.com/forms/d/e/1FAIpQLSc7A7rtR_bET-_3a5yHYjmcmT0kcycIqbLxXksuNbfgh4tfpg/viewform?embedded=true" width="640" height="952" frameborder="0" marginheight="0" marginwidth="0"></iframe>
       </div>
     </section><!-- End Featured Services Section -->
@@ -220,7 +220,7 @@
   <script src="assets/js/main.js"></script>
   
 <!--Recaptcha v2-->
-<script src="https://www.google.com/recaptcha/api.js"></script>
+<!--script src="https://www.google.com/recaptcha/api.js"></script>
 <script type="text/javascript">
           grecaptcha.ready(function() {
           console.log("grecaptcha ready");
@@ -229,7 +229,7 @@
               'callback' : function(response){if(grecaptcha.getResponse() == "success") {console.log(response); $("#submitform").css( "display", "block" );}}
             });
           });   
-  </script>
+  </script-->
   <!--Recaptcha v2-->
 </body>
 
