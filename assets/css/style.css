@@ -13,6 +13,10 @@
   padding-top:115px !important;
 }
 
+.hideonmobile{
+  display: none;
+}
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -550,7 +554,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 992px) {
   #hero {
-    height: 100vh;
+    height: 70vh;
   }
   #hero .carousel-container {
     top: 66px;
