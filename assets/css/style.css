@@ -13,11 +13,6 @@
   padding-top:115px !important;
 }
 
-@media (max-width: 510px) {
-.hideonmobile{
-  display: none;
-}
-}
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -295,6 +290,7 @@ h1, h2, h3, h4, h5, h6 {
   .get-started-btn {
     margin: 0 48px 0 0;
     padding: 6px 18px;
+    display: none;
   }
 }
 
