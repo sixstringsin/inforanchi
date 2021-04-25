@@ -170,5 +170,11 @@
   </script-->
   <!--Recaptcha v2-->
 </body>
-
+<script>
+  $("#twitter-widget-0").on("load", function() {
+  let head = $("#twitter-widget-0").contents().find("head");
+  let css = '<style>.timeline-Viewport{overflow:hidden}</style>';
+  $(head).append(css);
+});
+  </script>
 </html>
