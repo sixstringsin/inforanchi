@@ -13,6 +13,19 @@
     console.log('frame1'+doctwitter);
     doctwitter.body.innerHTML = doctwitter.body.innerHTML + '<style>.timeline-Viewport{overflow:hidden}</style>';
   }
+
+/*Show Disclaimer*/
+    $(document).ready(function () {
+    //if cookie hasn't been set...
+    if (document.cookie.indexOf("ModalShown=true")<0) {
+        $("#myModal").modal("show");
+        //Modal has been shown, now set a cookie so it never comes back
+        $("#myModalClose").click(function () {
+            $("#myModal").modal("hide");
+        });
+        document.cookie = "ModalShown=true";
+    }
+});
 /*End Custom Javascript*/
 
 !(function($) {
