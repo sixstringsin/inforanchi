@@ -5,7 +5,6 @@
 * License: https://bootstrapmade.com/license/
 */
 /*Custom Javascript*/
-<script>
   /*hide twitter scrollbar*/
   window.onload = function() {
     let frameElement = document.getElementById("twitter-widget-0");
@@ -14,7 +13,6 @@
     console.log('frame1'+doctwitter);
     doctwitter.body.innerHTML = doctwitter.body.innerHTML + '<style>.timeline-Viewport{overflow:hidden}</style>';
   }
-  </script>
 /*End Custom Javascript*/
 
 !(function($) {
