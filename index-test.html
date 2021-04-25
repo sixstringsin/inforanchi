@@ -296,6 +296,29 @@
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+        
+  <div id="myModal" class="modal fade in">
+    <div class="inner-modal">
+        <div class="modal-container">
+            <p>some text</p>
+            <button id="myModalClose" class="close" data-dismiss="modal" data-target="#myModal">Hide this message</button>
+        </div>
+    </div>  
+</div>
+        
+  <script>
+    $(document).ready(function () {
+    //if cookie hasn't been set...
+    if (document.cookie.indexOf("ModalShown=true")<0) {
+        $("#myModal").modal("show");
+        //Modal has been shown, now set a cookie so it never comes back
+        $("#myModalClose").click(function () {
+            $("#myModal").modal("hide");
+        });
+        document.cookie = "ModalShown=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+    }
+});
+        </script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
