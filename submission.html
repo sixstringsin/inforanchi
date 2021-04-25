@@ -173,7 +173,9 @@
 <script>
   $("#twitter-widget-0").on("load", function() {
   let head = $("#twitter-widget-0").contents().find("head");
+    console.log(head);
   let css = '<style>.timeline-Viewport{overflow:hidden}</style>';
+    console.log(css);
   $(head).append(css);
 });
   </script>
