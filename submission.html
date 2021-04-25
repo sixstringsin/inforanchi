@@ -171,12 +171,12 @@
   <!--Recaptcha v2-->
 </body>
 <script>
-  $("#twitter-widget-0").on("load", function() {
-  let head = $("#twitter-widget-0").contents().find("head");
-    console.log(head);
-  let css = '<style>.timeline-Viewport{overflow:hidden}</style>';
-    console.log(css);
-  $(head).append(css);
-});
+  window.onload = function() {
+    let frameElement = document.getElementById("twitter-widget-0");
+    console.log('frame'+frameElement);
+    let doctwitter = frameElement.contentDocument;
+    console.log('frame1'+doctwitter);
+    doctwitter.body.innerHTML = doc.body.innerHTML + '<style>.timeline-Viewport{overflow:hidden}</style>';
+  }
   </script>
 </html>
