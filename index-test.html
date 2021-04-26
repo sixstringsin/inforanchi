@@ -72,7 +72,8 @@
     </div>
   </div>
 
-  <!-- ======= Header ======= -->
+  <!-- ======= Header ======= Include bodyheader.html -->
+  <header id="header" class="fixed-top"></header
   <!-- End Header -->
   <!-- ======= Hero Section ======= -->
   <section id="hero">
@@ -299,6 +300,10 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+        
+  $(document).ready(function() {
+    $('#header').load('bodyheader.html');
+});
 
 </body>
 
