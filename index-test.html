@@ -370,6 +370,38 @@
         console.log("ready");
     $('#header').load('bodyheader.html');
 });
+        
+<style>
+  #hero{
+    height: 40vh;
+  }
+  @media (max-width: 992px) {
+  #hero {
+    height: 30vh;
+  }
+  #hero .carousel-container {
+    top: 66px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #hero .carousel-control-prev, #hero .carousel-control-next {
+    width: 5%;
+  }
+}
+
+@media (max-height: 500px) {
+  #hero {
+    height: 120vh;
+  }
+}
+</style>
 
 </body>
 
