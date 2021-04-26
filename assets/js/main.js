@@ -5,20 +5,25 @@
 * License: https://bootstrapmade.com/license/
 */
 /*Custom Javascript*/
-  /*hide twitter scrollbar*/
+  /*hide twitter scrollbar
   window.onload = function() {
     let frameElement = document.getElementById("twitter-widget-0");
     console.log('frame'+frameElement);
     let doctwitter = frameElement.contentDocument;
     console.log('frame1'+doctwitter);
     doctwitter.body.innerHTML = doctwitter.body.innerHTML + '<style>.timeline-Viewport{overflow:hidden}</style>';
-  }
+  }*/
 
 /*Show Disclaimer*/
     $(document).ready(function () {
     //if cookie hasn't been set...
     if (document.cookie.indexOf("ModalShown=true")<0) {
-        $("#myModal").modal("show");
+        //$("#myModal").modal("show");
+      $("#myModal").modal({
+                        backdrop: 'static',
+                        keyboard: true, 
+                        show: true
+                });
         //Modal has been shown, now set a cookie so it never comes back
         $("#myModalClose").click(function () {
             $("#myModal").modal("hide");
