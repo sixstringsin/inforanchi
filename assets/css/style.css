@@ -1104,6 +1104,9 @@ section {
 .team .container {
   display: flex;
 }
+.team .h2 {
+  font-size: 21px;
+}
 .team .member {
   text-align: center;
   margin-bottom: 20px;
