@@ -177,9 +177,12 @@
       <div class="section-title" style="padding-bottom: 0px;font-size:14px;color:#919191">Latest from <img src="assets/img/teamhelplogo.jpeg" style="width: 50px;height: 35px;"></div>
       <div class="row no-gutters">
          <div class="col-lg-4 col-md-6">
-            <div class="icon-box easyzoom easyzoom--overlay">
+            <div class="icon-box imagelayovercontainer">
               <a href="assets/img/teamhelp1.jpg" onclick="return false">
-               <img src="assets/img/teamhelp1.jpg" style="max-width: -webkit-fill-available;">
+               <img src="assets/img/teamhelp1.jpg" style="max-width: -webkit-fill-available;" class="imagetolayover">
+                <div class="imagelayover">
+                  <div class="imagelayovertext">View</div>
+                </div>
               </a>
             </div>
          </div>
@@ -356,6 +359,34 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <!--<script>$('.easyzoom').easyZoom();</script>-->
+  
+  <style>
+  .imagelayover {
+ /*transition: .5s ease;*/
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.imagelayovercontainer:hover .imagetolayover {
+  opacity: 0.3;
+}
+
+.imagelayovercontainer:hover .imagelayover {
+  opacity: 1;
+}
+
+.imagelayovertext {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+  </style>
 
 </body>
 
