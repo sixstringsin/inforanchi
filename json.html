@@ -134,8 +134,6 @@ td:last-child {
 }
 
 	</style>
-<script src="https://spreadsheets.google.com/feeds/cells/1aeagnEajMgUdrpGn8cjC2dl1yGPORcvHZPKuwlhzTA4/2/public/full?alt=json&callback=doData"></script>
-
   <!-- =======================================================
   * Template Name: Green - v2.3.1
   * Template URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
@@ -203,57 +201,8 @@ td:last-child {
   <!-- End Header -->
   <main id="main">
     <section id="mainsheet">
-      <div style="height:100%">
-        <script type="text/javascript">
-  var spData = null;
-  function doData(json) {
-      spData = json.feed.entry;
-  }
-  
-  function drawCell(tr, val) {
-      var td = $("<td/>");
-      tr.append(td);
-      td.append(val);
-      return td;
-  }
-  function drawRow(table, rowData) {
-	  if (rowData == null) return null;
-	  if (rowData.length == 0) return null;
-	  var tr = $("<tr/>");
-	  table.append(tr);
-	  for(var c=0; c<rowData.length; c++) {
-		  drawCell(tr, rowData[c]);
-	  }
-	  return tr;
-  }
-  
-  function drawTable(parent) {
-	  var table = $("<table/>");
-	  parent.append(table);
-	  return table;
-  }
-  
-  function readData(parent) {
-      var data = spData;
-      var table = drawTable(parent);
-      var rowData = [];
-      
-      for(var r=0; r<data.length; r++) {
-          var cell = data[r]["gs$cell"];
-          var val = cell["$t"];
-          if (cell.col == 1) {
-              drawRow(table, rowData);
-              rowData = [];
-          }
-          rowData.push(val);
-      }
-      drawRow(table, rowData);
-  }
-  $(document).ready(function(){
-      readData($("#data"));
-  });
+      <div id="tablecontainer" style="height:100%">
 
-  </script>
       </div>
     </section>
   </main><!-- End #main -->
@@ -322,7 +271,57 @@ td:last-child {
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+<script type="text/javascript">
+  var spData = null;
+  function doData(json) {
+      spData = json.feed.entry;
+  }
+  
+  function drawCell(tr, val) {
+      var td = $("<td/>");
+      tr.append(td);
+      td.append(val);
+      return td;
+  }
+  function drawRow(table, rowData) {
+	  if (rowData == null) return null;
+	  if (rowData.length == 0) return null;
+	  var tr = $("<tr/>");
+	  table.append(tr);
+	  for(var c=0; c<rowData.length; c++) {
+		  drawCell(tr, rowData[c]);
+	  }
+	  return tr;
+  }
+  
+  function drawTable(parent) {
+	  var table = $("<table/>");
+	  parent.append(table);
+	  return table;
+  }
+  
+  function readData(parent) {
+      var data = spData;
+      var table = drawTable(parent);
+      var rowData = [];
+      
+      for(var r=0; r<data.length; r++) {
+          var cell = data[r]["gs$cell"];
+          var val = cell["$t"];
+          if (cell.col == 1) {
+              drawRow(table, rowData);
+              rowData = [];
+          }
+          rowData.push(val);
+      }
+      drawRow(table, rowData);
+  }
+  $(document).ready(function(){
+      readData($("#tablecontainer"));
+  });
 
+  </script>
+  <script src="https://spreadsheets.google.com/feeds/cells/1aeagnEajMgUdrpGn8cjC2dl1yGPORcvHZPKuwlhzTA4/2/public/full?alt=json&callback=doData"></script>
 </body>
 
 </html>
