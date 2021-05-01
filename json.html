@@ -291,16 +291,22 @@ function drawThead(table, rowData) {
 	  if (rowData.length == 0) return null;
 	var thead = $("<thead/>");
 	table.append(thead);
+	console.log("10");
+	console.log(table);
 	var th = $("<th/>");
 	  table.append(th);
+		console.log("11");
+	console.log(table);
 	  for(var c=0; c<rowData.length; c++) {
 		  drawCell(th, rowData[c]);
 	  }
-	
+		console.log("12");
+	console.log(table);
 	var tbody = $("<tbody/>");
 	table.append(tbody);
-	console.log(table.innerHTML);
-	  return tbody;
+		console.log("13");
+	console.log(table);	  
+	return tbody;
   }
   function drawRow(table, rowData) {
 	  if (rowData == null) return null;
