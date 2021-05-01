@@ -331,7 +331,7 @@ function drawThead(table, rowData) {
       var rowData = [];
 	var tbody;
       
-      /*Nish*/
+      /*Nish
 	  console.log("1");
 	var cell1 = data[0]["gs$cell"];
 	  console.log(cell1);
@@ -346,7 +346,7 @@ function drawThead(table, rowData) {
           rowData.push(val1);  
 	 /*End*/ 
 	  
-      for(var r=1; r<data.length; r++) {
+      for(var r=0; r<data.length; r++) {
           var cell = data[r]["gs$cell"];
           var val = cell["$t"];
           if (cell.col == 1) {
@@ -356,10 +356,33 @@ function drawThead(table, rowData) {
           rowData.push(val);
       }
       drawRow(tbody, rowData);
-$('table').DataTable();
+	  
+var myTable = table;
+var thead = myTable.find("thead");
+var tbody = myTable.find("tbody");
+var thRow1 =  myTable.find("tr:first");
+var thRows =  myTable.find("tr");
+
+if (thead.length===0){
+    thead = jQuery("<thead></thead>").appendTo(myTable);    
+}
+if (tbody.length===0){
+    tbody = jQuery("<tbody></tbody>").appendTo(myTable);    
+}
+
+var copy = thRowss.clone(true).appendTo("tbody");
+
+var copy = thRow1.clone(true).appendTo("thead");
+thRow1.remove();
+
+var copy = thRows.clone(true).appendTo("tbody");
+thRows.remove();
+
   }
   $(document).ready(function(){
       readData($("#tablecontainer"));
+	  
+$('table').DataTable();
   });
 
   </script>
