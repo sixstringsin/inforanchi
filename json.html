@@ -202,6 +202,7 @@ td:last-child {
   <!-- End Header -->
   <main id="main">
     <section id="mainsheet">
+	    <hr>
       <div id="tablecontainer" style="height:100%;padding-top:25px">
 
       </div>
@@ -381,10 +382,13 @@ thRows.remove();
   $(document).ready(function(){
       var table=readData($("#tablecontainer"));
 	  
-//table.DataTable();
+table.DataTable();
   });
 
   </script>
+	<style>
+		tr{background-color:antiquewhite;}
+	</style>
   <script src="https://spreadsheets.google.com/feeds/cells/1aeagnEajMgUdrpGn8cjC2dl1yGPORcvHZPKuwlhzTA4/2/public/full?alt=json&callback=doData"></script>
 </body>
 
