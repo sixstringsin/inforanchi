@@ -355,7 +355,7 @@ function drawThead(table, rowData) {
           }
           rowData.push(val);
       }
-      drawRow(tbody, rowData);
+      drawRow(table, rowData);
 	  
 var myTable = table;
 var thead = myTable.find("thead");
@@ -370,19 +370,17 @@ if (tbody.length===0){
     tbody = jQuery("<tbody></tbody>").appendTo(myTable);    
 }
 
-var copy = thRowss.clone(true).appendTo("tbody");
-
 var copy = thRow1.clone(true).appendTo("thead");
 thRow1.remove();
 
 var copy = thRows.clone(true).appendTo("tbody");
 thRows.remove();
-
+	return table;
   }
   $(document).ready(function(){
-      readData($("#tablecontainer"));
+      var table=readData($("#tablecontainer"));
 	  
-$('table').DataTable();
+table.DataTable();
   });
 
   </script>
