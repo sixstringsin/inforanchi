@@ -375,6 +375,7 @@ thRow1.remove();
 
 var copy = thRows.clone(true).appendTo("tbody");
 thRows.remove();
+	  var duplicateHeader = tbody.find("tr:first"); duplicateHeader.remove();
 	return table;
   }
   $(document).ready(function(){
