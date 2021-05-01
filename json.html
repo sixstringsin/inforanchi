@@ -40,7 +40,7 @@
 	<style type="text/css" media="print">
   form {display: none;}
 </style>
-<style>
+<!--<style>
 		
 table {
   background: white;
@@ -134,7 +134,7 @@ td:last-child {
   border-right: 0px;
 }
 
-	</style>
+	</style>-->
   <!-- =======================================================
   * Template Name: Green - v2.3.1
   * Template URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
@@ -285,6 +285,22 @@ td:last-child {
       td.append(val);
       return td;
   }
+	
+function drawThead(table, rowData) {
+	  if (rowData == null) return null;
+	  if (rowData.length == 0) return null;
+	var thead = $("<thead/>");
+	table.append(thead);
+	var th = $("<th/>");
+	  table.append(th);
+	  for(var c=0; c<rowData.length; c++) {
+		  drawCell(th, rowData[c]);
+	  }
+	
+	var tbody = $("<thead/>");
+	table.append(tbody);
+	  return tbody;
+  }
   function drawRow(table, rowData) {
 	  if (rowData == null) return null;
 	  if (rowData.length == 0) return null;
@@ -306,17 +322,29 @@ td:last-child {
       var data = spData;
       var table = drawTable(parent);
       var rowData = [];
+	var tbody;
       
-      for(var r=0; r<data.length; r++) {
+      /*Nish*/
+	var cell = data[0]["gs$cell"];
+          var val = cell["$t"];
+          if (cell.col == 1) {
+              tbody=drawThead(table, rowData);
+              rowData = [];
+          }
+          rowData.push(val);  
+	 /*End*/ 
+	  
+      for(var r=1; r<data.length; r++) {
           var cell = data[r]["gs$cell"];
           var val = cell["$t"];
           if (cell.col == 1) {
-              drawRow(table, rowData);
+              drawRow(tbody, rowData);
               rowData = [];
           }
           rowData.push(val);
       }
-      drawRow(table, rowData);
+      drawRow(tbody, rowData);
+$('table').DataTable();
   }
   $(document).ready(function(){
       readData($("#tablecontainer"));
