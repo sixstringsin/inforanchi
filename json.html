@@ -326,13 +326,18 @@ function drawThead(table, rowData) {
 	var tbody;
       
       /*Nish*/
-	var cell = data[0]["gs$cell"];
-          var val = cell["$t"];
-          if (cell.col == 1) {
+	  console.log("1");
+	var cell1 = data[0]["gs$cell"];
+	  console.log(cell);
+          var val1 = cell["$t"];
+	  console.log(val1);
+          if (cell1.col == 1) {
+		  console.log("2");
               tbody=drawThead(table, rowData);
+		  console.log(tbody);
               rowData = [];
           }
-          rowData.push(val);  
+          rowData.push(val1);  
 	 /*End*/ 
 	  
       for(var r=1; r<data.length; r++) {
