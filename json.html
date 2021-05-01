@@ -350,7 +350,7 @@ function drawThead(table, rowData) {
           var cell = data[r]["gs$cell"];
           var val = cell["$t"];
           if (cell.col == 1) {
-              drawRow(tbody, rowData);
+              drawRow(table, rowData);
               rowData = [];
           }
           rowData.push(val);
