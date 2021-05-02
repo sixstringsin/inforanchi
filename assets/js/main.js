@@ -219,7 +219,6 @@
         portfolioIsotope.isotope({
           filter: $(this).data('filter')
         });
-      }
     });
   
     // Initiate venobox (lightbox feature used in portofilo)
@@ -228,6 +227,7 @@
       $('.venobox').venobox();
     }
     });
+    }
   });
 
   // Portfolio details carousel
