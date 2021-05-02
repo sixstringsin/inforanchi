@@ -9,8 +9,14 @@
 # Custom
 --------------------------------------------------------------*/
 #mainsheet{
-  height: 1080px;
-  padding-top:115px !important;
+    height: 1080px;
+    padding-top:20px !important;
+  }
+@media (max-width: 992px) {
+  #mainsheet{
+    height: 1080px;
+    padding-top:30px !important;
+  }
 }
 #tablecontainer {height:900px;overflow:scroll;padding-top:25px;-webkit-overflow-scrolling: auto;}
 #tablecontainer tr{background-color:antiquewhite;}
