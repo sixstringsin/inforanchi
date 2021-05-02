@@ -12,6 +12,9 @@
   height: 1080px;
   padding-top:115px !important;
 }
+#tablecontainer {height:900px;overflow:scroll;padding-top:25px;-webkit-overflow-scrolling: auto;}
+#tablecontainer tr{background-color:antiquewhite;}
+.modal-body {font-size: small;}
 
 /*--------------------------------------------------------------
 # General
