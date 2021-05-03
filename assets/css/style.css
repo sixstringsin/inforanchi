@@ -18,9 +18,11 @@
     padding-top:30px !important;
   }
 }
-#tablecontainer {height:900px;overflow:scroll;padding-top:25px;-webkit-overflow-scrolling: auto;text-align:center;}
-#tablecontainer p{color:brown}
-#tablecontainer thead tr{background-color:antiquewhite;}
+#tablecontainer {height:900px;overflow:scroll;padding-top:25px;-webkit-overflow-scrolling: auto;text-align:left;}
+#tablecontainer p{color:white;background-color: brown;text-align:center}
+#tablecontainer thead tr{background-color:#5cb874;}
+#tablecontainer .odd{background-color:aliceblue;}
+#tablecontainer .even{background-color:antiquewhite;}
 .modal-body {font-size: small;}
 
 /*--------------------------------------------------------------
