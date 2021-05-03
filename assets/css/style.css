@@ -20,7 +20,7 @@
 }
 #tablecontainer {height:900px;overflow:scroll;padding-top:25px;-webkit-overflow-scrolling: auto;text-align:left;}
 #tablecontainer p{color:white;background-color: brown;text-align:center}
-#tablecontainer thead tr{background-color:#5cb874;}
+#tablecontainer thead tr{background-color:#5cb874;color:white;font-weight:bold}
 #tablecontainer .odd{background-color:aliceblue;}
 #tablecontainer .even{background-color:antiquewhite;}
 .modal-body {font-size: small;}
