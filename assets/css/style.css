@@ -20,9 +20,8 @@
 }
 #tablecontainer {height:900px;overflow:scroll;padding-top:25px;-webkit-overflow-scrolling: auto;text-align:left;}
 #tablecontainer p{color:white;background-color: brown;text-align:center}
-#tablecontainer thead tr{background-color:#5cb874;color:white;font-weight:bold}
-#tablecontainer .odd{background-color:aliceblue;}
-#tablecontainer .even{background-color:antiquewhite;}
+#tablecontainer thead tr{background-color:gray;color:white;font-weight:bold}
+#tablecontainer .even{background-color:#E4F0EC;}
 .modal-body {font-size: small;}
 
 /*--------------------------------------------------------------
