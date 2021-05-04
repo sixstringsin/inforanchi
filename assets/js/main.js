@@ -15,19 +15,59 @@
   }*/
 
 /*Show Disclaimer*/
+    function showModal(context) {
+  var myModal = getModal();
+
+  // Init the modal if it hasn't been already.
+  if (!myModal) { myModal = initModal(); }
+  
+  var modalHtml =
+      '<div class="modal-body">'+
+        'inforanchi.in is a not for profit initiative by a group of Ranchi residents. We are not paid by anyone and not affiliated to Govt or any NGO. Information on this website is collected from twitter, facebook, whatsapp etc. and local knowledge. Please verify the information before availing the service.'+
+        'We also use cookies to serve better content to you.'+
+	'<br><br>We kindly request you to accept these terms to use this website.'+
+      '</div>'+
+      '<div class="modal-footer">'+
+        '<button type="button" class="btn btn-secondary" data-dismiss="modal">I Agree</button>'+
+      '</div>';
+
+  setModalContent(modalHtml);
+
+  // Show the modal.
+  jQuery(myModal).modal({backdrop: 'static', keyboard: true, show: true});
+
+}
+
+function getModal() {
+  return document.getElementById('myModal');
+}
+
+function setModalContent(html) {
+  getModal().querySelector('.modal-content').innerHTML = html;
+}
+
+function initModal() {
+  var modal = document.createElement('div');
+  modal.classList.add('modal', 'fade');
+  modal.setAttribute('id', 'myModal');
+  modal.setAttribute('tabindex', '-1');
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-labelledby', 'exampleModalCenterTitle');
+  modal.setAttribute('aria-hidden', 'true');
+  modal.innerHTML =
+        '<div class="modal-dialog modal-dialog-centered" role="document">' +
+    	'<div class="modal-content">';
+  document.body.appendChild(modal);
+  return modal;
+}
     $(document).ready(function () {
     //if cookie hasn't been set...
     if (document.cookie.indexOf("ModalShown=true")<0) {
-        //$("#myModal").modal("show");
-      $("#myModal").modal({
-                        backdrop: 'static',
-                        keyboard: true, 
-                        show: true
-                });
+        showModal('disclaimer');
         //Modal has been shown, now set a cookie so it never comes back
-        $("#myModalClose").click(function () {
+        /*$("#myModalClose").click(function () {
             $("#myModal").modal("hide");
-        });
+        });*/
         document.cookie = "ModalShown=true";
     }
 });
