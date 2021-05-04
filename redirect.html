@@ -4,9 +4,9 @@
 <head>
 
   <!--SEO tags-->
-  <title>Ambulance Availability</title>
-  <meta content="Find ambulance contacts at Ranchi" name="description">
-  <link rel="canonical" href="https://inforanchi.in/ambulance" />
+  <title>External Site Redirection</title>
+  <meta content="You will be redirected to an external site" name="description">
+  <link rel="canonical" href="https://inforanchi.in/redirect" />
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   
@@ -41,16 +41,17 @@
   }
   
   function redirectPage(){
-    document.getElementById ("sitename").textContent = getUrlVars()["name"]; 
+    document.getElementById("sitename").textContent = getUrlVars()["name"]; 
     setInterval (
       function() 
       { 
           seconds--; 
-          document.getElementById ("countdown").textContent = seconds; 
+          document.getElementById("countdown").textContent = seconds; 
           if (seconds <= 0){
             clearInterval (countdown);
             window.location.href=getUrlVars()["url"];
             }
+       }
         , 1000);
   }
   </script>
