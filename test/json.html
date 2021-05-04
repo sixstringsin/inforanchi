@@ -114,7 +114,7 @@
 	      <p>Free & Verified Ambulance Service for Ranchi residents starting May 4th</p>
 	      <img src="/teamhelp/ambulance_hin.jpg" alt="free ambulance service" style="width: 330px;height: 327px;margin: auto;display: block;"/>
 	      <!--img src="/teamhelp/ambulance_eng.jpg" alt="free ambulance service" style="width: 400px;height: 400px;margin: auto;display: block;"/><br/-->
-	      <br><a href="/redirect?name=TeamHelp&url=https://forms.gle/TCpJVVP5fStCU9Hz9" class="get-started-btn scrollto">Like the cause? Support TeamHelp &nbsp;&nbsp; <i class="icofont-external-link"></i></a><br>
+	      <br><a href="#" onClick="showModal();" class="get-started-btn scrollto">Like the cause? Support TeamHelp &nbsp;&nbsp; <i class="icofont-external-link"></i></a><br>
       	<p>List of ambulance related contacts at Ranchi. Please do not transfer money to anyone before availing the service.</p>
       </div>
     </section>
@@ -137,7 +137,7 @@
     </div>
   </footer><!-- End Footer -->
   
-  <!--Modal-->
+  <!--Modal--
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -169,6 +169,53 @@
 <script src="/assets/js/sheets.js"></script>
 <script src="https://spreadsheets.google.com/feeds/cells/178jCM3irD0TNUhYBjoLmqqDy3HNW2qz46hM76r4gh0U/2/public/full?alt=json&callback=doData"></script>
 <!--End data js-->
-	
+
+<script>
+  function showModal(context) {
+  var myModal = getModal();
+
+  // Init the modal if it hasn't been already.
+  if (!myModal) { myModal = initModal(); }
+
+  var modalHtml =
+      '<div class="modal-body">'+
+        'YYYinforanchi.in is a not for profit initiative by a group of Ranchi residents. We are not paid by anyone and not affiliated to Govt or any NGO. Information on this website is collected from twitter, facebook, whatsapp etc. and local knowledge. Please verify the information before availing the service.'+
+        'We also use cookies to serve better content to you.'+
+	'<br><br>We kindly request you to accept these terms to use this website.'+
+      '</div>'+
+      '<div class="modal-footer">'+
+        '<button type="button" class="btn btn-secondary" data-dismiss="modal">I Agree</button>'+
+      '</div>';
+
+  setModalContent(html);
+
+  // Show the modal.
+  jQuery(myModal).modal({backdrop: 'static', keyboard: true, show: true});
+
+}
+
+function getModal() {
+  return document.getElementById('myModal');
+}
+
+function setModalContent(html) {
+  getExampleModal().querySelector('.modal-content').innerHTML = html;
+}
+
+function initModal() {
+  var modal = document.createElement('div');
+  modal.classList.add('modal', 'fade');
+  modal.setAttribute('id', 'myModal');
+  modal.setAttribute('tabindex', '-1');
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-labelledby', 'exampleModalCenterTitle');
+  modal.setAttribute('aria-hidden', 'true');
+  modal.innerHTML =
+        '<div class="modal-dialog modal-dialog-centered" role="document">' +
+    	'<div class="modal-content">';
+  document.body.appendChild(modal);
+  return modal;
+}
+</script>
 </body>
 </html>
