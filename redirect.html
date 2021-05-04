@@ -31,7 +31,7 @@
   .allcenter { line-height : 150px ; border : 1px solid #000 ; display : inline-block; vertical-align : middle; text-align:center} 
 </style >
 <script type="text/javascript">
-  var seconds=5;
+  var seconds=6;
   function getUrlVars() {
     var vars = {};
     var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
@@ -49,7 +49,7 @@
           document.getElementById("countdown").textContent = seconds; 
           if (seconds <= 0){
             clearInterval (countdown);
-            window.location.href=getUrlVars()["url"];
+            window.location=getUrlVars()["url"];
             }
        }
         , 1000);
@@ -58,6 +58,6 @@
 </head>
 
 <body onload="redirectPage()">
-   <span class = "allcenter"> You are leaving inforanchi.in to an external website hosted by <span id="sitename"></span>. You will be redirected automatically in <span id="countdown"></span>
+   <span class = "allcenter"> You are leaving inforanchi.in to an external website hosted by <span id="sitename"></span>. <br>You will be redirected automatically in <span id="countdown"></span>
 </body>
 </html>
