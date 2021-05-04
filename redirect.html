@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!--SEO tags-->
+  <title>Ambulance Availability</title>
+  <meta content="Find ambulance contacts at Ranchi" name="description">
+  <link rel="canonical" href="https://inforanchi.in/ambulance" />
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+  <!-- Favicons -->
+  <link href="/assets/img/favicon.png" rel="icon">
+  <link href="/assets/img/favicon.png" rel="apple-touch-icon">
+  <!--SEO tags-->
+  <!--OpenGraph-->
+  <meta property="og:title" content="Ranchi Covid Information">
+  <meta property="og:description" content="Find information on Covid related help for Ranchi">
+  <meta property="og:image" content="assets/img/screenshot.png">
+  <meta property="og:url" content="https://inforanchi.in">
+  <meta name="twitter:title" content="Ranchi Covid Information">
+  <meta name="twitter:description" content="Find information on Covid related help for Ranchi">
+  <meta name="twitter:image" content="assets/img/screenshot.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!--end open graph-->
+
+  <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"> 
+<style >.allcenter { line-height : 150px ; border : 1px solid #000 ; display : inline-block; vertical-align : middle; text-align:center} </ style >
+<script type="text/javascript">
+  var seconds=5;
+  function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+  }
+  
+  function redirectPage(){
+    document.getElementById ("sitename").textContent = getUrlVars()["name"]; 
+    setInterval (
+      function() 
+      { 
+          seconds--; 
+          document.getElementById ("countdown").textContent = seconds; 
+          if (seconds <= 0){
+            clearInterval (countdown);
+            window.location.href=getUrlVars()["url"];
+            }
+        , 1000);
+  }
+  </script>
+</head>
+
+<body onload="redirectPage()">
+   <span class = "allcenter"> You are leaving inforanchi.in to an external website hosted by <span id="sitename"></span>. You will be redirected automatically in <span id="countdown"></span>
+</body>
+</html>
