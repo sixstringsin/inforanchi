@@ -2,21 +2,37 @@
 <html lang="en">
 
 <head>
-  <!--Use only for test pages-->
-  <meta name="robots" content="noindex" />
-  <!--End use only for test pages-->
-  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9F57RSLDPP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9F57RSLDPP');
+</script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <!--SEO tags-->
-  <title></title>
+  <title>Ambulance Availability</title>
+  <meta content="Find ambulance contacts at Ranchi" name="description">
+  <link rel="canonical" href="https://inforanchi.in/ambulance" />
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-  <link rel="canonical" href="https://inforanchi.in" />
+  
   <!-- Favicons -->
   <link href="/assets/img/favicon.png" rel="icon">
   <link href="/assets/img/favicon.png" rel="apple-touch-icon">
   <!--SEO tags-->
+  <!--OpenGraph-->
+  <meta property="og:title" content="Ranchi Covid Information">
+  <meta property="og:description" content="Find information on Covid related help for Ranchi">
+  <meta property="og:image" content="assets/img/screenshot.png">
+  <meta property="og:url" content="https://inforanchi.in">
+  <meta name="twitter:title" content="Ranchi Covid Information">
+  <meta name="twitter:description" content="Find information on Covid related help for Ranchi">
+  <meta name="twitter:image" content="assets/img/screenshot.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!--end open graph-->
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -61,20 +77,20 @@
       <h1 class="logo mr-auto"><a href="index.html">Ranchi Covid Info</a></h1>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li><a href="/index" class="active">Home</a></li>
-          <li class="drop-down"><a href="/covid-medical-info">Medical Contacts</a>
-	    <ul>
-              <li><a href="oxygen">Oxygen Contacts</a></li>
-	      <li><a href="other-info">Ambulance</a></li>
-	      <li><a href="other-info">On Call Doctors</a></li>
-	      <li><a href="other-info">Medicine Home Delivery</a></li>
-              <li><a href="laboratory">Laboratory Testing</a></li>
-              <li><a href="other-info">Hospital</a></li>
-	      <li><a href="other-info">CT Scan</a></li>
+          <li><a href="/index">Home</a></li>
+          <li class="drop-down" class="active"><a href="#">Medical Contacts</a>
+	      <ul>
+        <li><a href="/oxygen">Oxygen Contacts</a></li>
+	      <li><a href="/ambulance">Ambulance</a></li>
+	      <li><a href="/doctors">On Call Doctors</a></li>
+	      <li><a href="/medicine">Medicine Home Delivery</a></li>
+        <li><a href="/laboratory">Laboratory Testing</a></li>
+        <li><a href="/hospital">Hospital</a></li>
+	      <li><a href="/radiology">CT Scan</a></li>
 	     </ul>
 	  </li>
           <li><a href="/donateblood">Blood Donation</a></li>
-          <li><a href="/food-grocery-info">Food & Grocery</a></li>
+          <li><a href="/food-grocery-info">Meal & Grocery</a></li>
           <li class="drop-down"><a href="other-info">Jharkhand/India Tools</a>
             <ul>
               <li><a href="other-info">Pan Jharkhand Resource Links</a></li>
@@ -95,6 +111,11 @@
     <section id="mainsheet">
       <hr>
       <div id="tablecontainer">
+	      <p>Free & Verified Ambulance Service for Ranchi residents starting May 4th</p>
+	      <img src="/teamhelp/ambulance_hin.jpg" alt="free ambulance service" style="width: 330px;height: 327px;margin: auto;display: block;"/><br/>
+	      <!--img src="/teamhelp/ambulance_eng.jpg" alt="free ambulance service" style="width: 400px;height: 400px;margin: auto;display: block;"/><br/-->
+	      <br><a href="index#about" class="get-started-btn scrollto" style="width: 330px;display:block;margin:auto;text-align:center;color:white;background-color:#5cb874">Like the cause? Support TeamHelp</a><br>
+      	<p>List of ambulance related contacts at Ranchi. Please do not transfer money to anyone before availing the service.</p>
       </div>
     </section>
   </main><!-- End #main -->
@@ -146,9 +167,8 @@
 <script src="/assets/js/main.js"></script>
 <!--Include for pages showing data-->
 <script src="/assets/js/sheets.js"></script>
-<script src="https://spreadsheets.google.com/feeds/cells/1aeagnEajMgUdrpGn8cjC2dl1yGPORcvHZPKuwlhzTA4/2/public/full?alt=json&callback=doData"></script>
+<script src="https://spreadsheets.google.com/feeds/cells/178jCM3irD0TNUhYBjoLmqqDy3HNW2qz46hM76r4gh0U/2/public/full?alt=json&callback=doData"></script>
 <!--End data js-->
 	
 </body>
 </html>
-
