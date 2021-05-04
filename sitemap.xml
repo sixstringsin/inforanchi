@@ -1,62 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 <url>
-  <loc>http://inforanchi.in/</loc>
-  <lastmod>2021-05-01T19:26:00+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://inforanchi.in/</loc>
+<lastmod>2021-05-04T00:40:00+00:00</lastmod>
+<priority>1.00</priority>
 </url>
 <url>
-  <loc>http://inforanchi.in/covid-medical-info</loc>
-  <lastmod>2021-05-01T19:26:00+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://inforanchi.in/oxygen</loc>
+<lastmod>2021-05-04T00:40:00+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://inforanchi.in/covid-doctor-medicine.html</loc>
-  <lastmod>2021-05-01T19:26:00+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://inforanchi.in/other-info</loc>
+<lastmod>2021-05-04T00:40:00+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://inforanchi.in/food-grocery-info</loc>
-  <lastmod>2021-05-01T19:26:00+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://inforanchi.in/laboratory</loc>
+<lastmod>2021-05-04T00:40:00+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://inforanchi.in/other-info</loc>
-  <lastmod>2021-05-01T19:26:00+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://inforanchi.in/donateblood</loc>
+<lastmod>2021-05-04T00:40:00+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://inforanchi.in/donateblood</loc>
-  <lastmod>2021-05-01T19:26:00+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://inforanchi.in/food-grocery-info</loc>
+<lastmod>2021-05-04T00:40:00+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://inforanchi.in/privacy</loc>
-  <lastmod>2021-05-01T19:26:00+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://inforanchi.in/ambulance</loc>
+<lastmod>2021-05-04T00:40:00+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>http://inforanchi.in/disclaimer</loc>
-  <lastmod>2021-05-01T19:26:00+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://inforanchi.in/doctors</loc>
+<lastmod>2021-05-04T00:40:00+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://inforanchi.in/terms</loc>
-  <lastmod>2021-05-01T19:26:00+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://inforanchi.in/medicine</loc>
+<lastmod>2021-05-04T00:40:00+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>http://inforanchi.in/pdf/donateblood.pdf</loc>
-  <lastmod>2021-05-01T19:26:00+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://inforanchi.in/hospital</loc>
+<lastmod>2021-05-04T00:40:00+00:00</lastmod>
+<priority>0.64</priority>
 </url>
-
-
+<url>
+<loc>https://inforanchi.in/radiology</loc>
+<lastmod>2021-05-04T00:40:00+00:00</lastmod>
+<priority>0.64</priority>
+</url>
 </urlset>
