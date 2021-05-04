@@ -32,6 +32,7 @@
 </style >
 <script type="text/javascript">
   var seconds=6;
+  var countdown;
   function getUrlVars() {
     var vars = {};
     var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
@@ -42,7 +43,7 @@
   
   function redirectPage(){
     document.getElementById("sitename").textContent = getUrlVars()["name"]; 
-    setInterval (
+    countdown=setInterval (
       function() 
       { 
           seconds--; 
@@ -58,6 +59,6 @@
 </head>
 
 <body onload="redirectPage()">
-   <span class = "allcenter"> You are leaving inforanchi.in to an external website hosted by <span id="sitename"></span>. <br>You will be redirected automatically in <span id="countdown"></span>
+   <div class = "allcenter"> You are leaving inforanchi.in to an external website hosted by <span id="sitename"></span>. <br>You will be redirected automatically in <span id="countdown"></span>
 </body>
 </html>
