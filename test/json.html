@@ -137,25 +137,7 @@
     </div>
   </footer><!-- End Footer -->
   
-  <!--Modal--
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        inforanchi.in is a not for profit initiative by Ranchi residents. We are not paid by anyone and not affiliated to Govt or any NGO. Information on this website is collected from twitter, facebook, whatsapp etc. and local knowledge. Please verify the information before availing the service and do not transfer money to anyone in advance without verification. 
-        We also use cookies to serve better content to you.
-	<br><br>
-        We kindly request you to accept these terms to use this website.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">I Agree</button>
-      </div>
-    </div>
-  </div>
-  </div>
-<!--End Modal-->
-
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="/assets/vendor/jquery/jquery.min.js"></script>
@@ -169,53 +151,5 @@
 <script src="/assets/js/sheets.js"></script>
 <script src="https://spreadsheets.google.com/feeds/cells/178jCM3irD0TNUhYBjoLmqqDy3HNW2qz46hM76r4gh0U/2/public/full?alt=json&callback=doData"></script>
 <!--End data js-->
-
-<script>
-  function showModal(context) {
-  var myModal = getModal();
-
-  // Init the modal if it hasn't been already.
-  if (!myModal) { myModal = initModal(); }
-
-  var modalHtml =
-      '<div class="modal-body">'+
-        'YYYinforanchi.in is a not for profit initiative by a group of Ranchi residents. We are not paid by anyone and not affiliated to Govt or any NGO. Information on this website is collected from twitter, facebook, whatsapp etc. and local knowledge. Please verify the information before availing the service.'+
-        'We also use cookies to serve better content to you.'+
-	'<br><br>We kindly request you to accept these terms to use this website.'+
-      '</div>'+
-      '<div class="modal-footer">'+
-        '<button type="button" class="btn btn-secondary" data-dismiss="modal">I Agree</button>'+
-      '</div>';
-
-  setModalContent(modalHtml);
-
-  // Show the modal.
-  jQuery(myModal).modal({backdrop: 'static', keyboard: true, show: true});
-
-}
-
-function getModal() {
-  return document.getElementById('myModal');
-}
-
-function setModalContent(html) {
-  getModal().querySelector('.modal-content').innerHTML = html;
-}
-
-function initModal() {
-  var modal = document.createElement('div');
-  modal.classList.add('modal', 'fade');
-  modal.setAttribute('id', 'myModal');
-  modal.setAttribute('tabindex', '-1');
-  modal.setAttribute('role', 'dialog');
-  modal.setAttribute('aria-labelledby', 'exampleModalCenterTitle');
-  modal.setAttribute('aria-hidden', 'true');
-  modal.innerHTML =
-        '<div class="modal-dialog modal-dialog-centered" role="document">' +
-    	'<div class="modal-content">';
-  document.body.appendChild(modal);
-  return modal;
-}
-</script>
 </body>
 </html>
