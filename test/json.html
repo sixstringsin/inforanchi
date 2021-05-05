@@ -196,6 +196,7 @@ function getModal() {
   return document.getElementById('dynamicModal');
 }
 function setModalContent(html) {
+  getModal().querySelector('.modal-content').innerHTML ='';
   getModal().querySelector('.modal-content').innerHTML = html;
 }
 function initModal() {
