@@ -50,13 +50,13 @@ function showModal(context,name,url) {
   jQuery(myModal).modal({backdrop: 'static', keyboard: true, show: true});
   if(context='siteleavingpopup'){
     setTimeout(redirectExternal(url),3000);
-    setTimeout($("#myModal").modal("hide"););
+    setTimeout($("#dynamicModal").modal("hide"););
   }
 
 }
 
 function getModal() {
-  return document.getElementById('myModal');
+  return document.getElementById('dynamicModal');
 }
 
 function setModalContent(html) {
@@ -66,7 +66,7 @@ function setModalContent(html) {
 function initModal() {
   var modal = document.createElement('div');
   modal.classList.add('modal', 'fade');
-  modal.setAttribute('id', 'myModal');
+  modal.setAttribute('id', 'dynamicModal');
   modal.setAttribute('tabindex', '-1');
   modal.setAttribute('role', 'dialog');
   modal.setAttribute('aria-labelledby', 'exampleModalCenterTitle');
@@ -82,9 +82,9 @@ function initModal() {
     if (document.cookie.indexOf("ModalShown=true")<0) {
         showModal('disclaimer');
         //Modal has been shown, now set a cookie so it never comes back
-        /*$("#myModalClose").click(function () {
+        $("#myModalClose").click(function () {
             $("#myModal").modal("hide");
-        });*/
+        });
         document.cookie = "ModalShown=true";
     }
 });
