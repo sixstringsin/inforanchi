@@ -182,9 +182,14 @@ function showModal(context,name,url) {
   setModalContent(modalHtml);
   // Show the modal.
   jQuery(myModal).modal({backdrop: 'static', keyboard: true, show: true});
+	console.log(context);
   if(context=='siteleavingpopup'){
-    setTimeout(function(){$("#dynamicModal").modal("hide");},3000);
+	  console.log(context);
+    $(myModal).on('shown.bs.modal', function (e) {
+	    console.log('modal shown')
+	  setTimeout(function(){$("#dynamicModal").modal("hide");},3000);
     setTimeout(redirectExternal,3000,url);
+    })
   }
 }
 function getModal() {
