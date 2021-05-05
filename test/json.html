@@ -161,22 +161,22 @@ function showModal(context,name,url) {
   if (!myModal) { myModal = initModal(); }
   
   var modalHtml;
-  if(context='siteleavingpopup'){
+  if(context=='siteleavingpopup'){
       modalHtml='<div class="modal-body">'+
+        'You are leaving inforanchi.in to an external website hosted by '+name+'. Contents of this site are not owned by inforanchi.in'
+        '<br><br>Click continue if you are not automatically redirected.'+
+      '</div>'+
+      '<div class="modal-footer">'+
+        '<button type="button" class="btn btn-secondary" data-dismiss="modal" onClick="redirectExternal('+url+');">Continue</button>'+
+      '</div>';
+  }else{
+	modalHtml='<div class="modal-body">'+
         'inforanchi.in is a not for profit initiative by a group of Ranchi residents. We are not paid by anyone and not affiliated to Govt or any NGO. Information on this website is collected from twitter, facebook, whatsapp etc. and local knowledge. Please verify the information before availing the service.'+
         'We also use cookies to serve better content to you.'+
 	'<br><br>We kindly request you to accept these terms to use this website.'+
       '</div>'+
       '<div class="modal-footer">'+
         '<button type="button" class="btn btn-secondary" data-dismiss="modal">I Agree</button>'+
-      '</div>';
-  }else{
-	 modalHtml='<div class="modal-body">'+
-        'You are leaving inforanchi.in to an external website hosted by '+name+'. Contents of this site are not owned by inforanchi.in'
-        '<br><br>Click continue if you are not automatically redirected.'+
-      '</div>'+
-      '<div class="modal-footer">'+
-        '<button type="button" class="btn btn-secondary" data-dismiss="modal" onClick="redirectExternal('+url+');">Continue</button>'+
       '</div>';
   }
   setModalContent(modalHtml);
