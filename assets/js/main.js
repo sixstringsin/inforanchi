@@ -15,18 +15,28 @@
   }*/
 
 /*Show Disclaimer*/
-/*function redirectExternal(url){
+function modaloff(){
+	$('#dynamicModal').off('shown.bs.modal');
+}
+function redirectExternal(url){
  window.open(url, '_blank');
 }
 function showModal(context,name,url) {
   var myModal = getModal();
-
   // Init the modal if it hasn't been already.
   if (!myModal) { myModal = initModal(); }
   
   var modalHtml;
-  if(context='siteleavingpopup'){
+  if(context=='siteleavingpopup'){
       modalHtml='<div class="modal-body">'+
+        'You are leaving inforanchi.in to an external website hosted by <strong>'+name+'</strong>. Contents of this site are not owned by inforanchi.in'+
+        '<br><br>Click continue if you are not automatically redirected.'+
+      '</div>'+
+      '<div class="modal-footer">'+
+        '<button type="button" class="btn btn-secondary" data-dismiss="modal" onClick="modalOff();redirectExternal('+url+');">Continue</button>'+
+      '</div>';
+  }else{
+	modalHtml='<div class="modal-body">'+
         'inforanchi.in is a not for profit initiative by a group of Ranchi residents. We are not paid by anyone and not affiliated to Govt or any NGO. Information on this website is collected from twitter, facebook, whatsapp etc. and local knowledge. Please verify the information before availing the service.'+
         'We also use cookies to serve better content to you.'+
 	'<br><br>We kindly request you to accept these terms to use this website.'+
@@ -34,35 +44,27 @@ function showModal(context,name,url) {
       '<div class="modal-footer">'+
         '<button type="button" class="btn btn-secondary" data-dismiss="modal">I Agree</button>'+
       '</div>';
-  }else{
-	 modalHtml='<div class="modal-body">'+
-        'You are leaving inforanchi.in to an external website hosted by '+name+'. Contents of this site are not owned by inforanchi.in'
-        '<br><br>Click continue if you are not automatically redirected.'+
-      '</div>'+
-      '<div class="modal-footer">'+
-        '<button type="button" class="btn btn-secondary" data-dismiss="modal" onClick="redirectExternal('+url+');">Continue</button>'+
-      '</div>';
   }
-
   setModalContent(modalHtml);
-
   // Show the modal.
   jQuery(myModal).modal({backdrop: 'static', keyboard: true, show: true});
-  if(context='siteleavingpopup'){
-    setTimeout(redirectExternal(url),3000);
-    setTimeout($("#dynamicModal").modal("hide"));
+	console.log(context);
+  if(context=='siteleavingpopup'){
+	  console.log(context);
+    $(myModal).one('shown.bs.modal', function (e) {
+	console.log('modal shown')
+	setTimeout(function(){$(myModal).modal("hide");},5000);
+        setTimeout(redirectExternal,5000,url);
+    })
   }
-
 }
-
 function getModal() {
   return document.getElementById('dynamicModal');
 }
-
 function setModalContent(html) {
+  getModal().querySelector('.modal-content').innerHTML ='';
   getModal().querySelector('.modal-content').innerHTML = html;
 }
-
 function initModal() {
   var modal = document.createElement('div');
   modal.classList.add('modal', 'fade');
@@ -76,22 +78,22 @@ function initModal() {
     	'<div class="modal-content">';
   document.body.appendChild(modal);
   return modal;
-}*/
-    /*Show Disclaimer*/
-    $(document).ready(function () {
+}
+	$(document).ready(function () {
     //if cookie hasn't been set...
-    if (document.cookie.indexOf("ModalShown=true")<0) {
+    if (document.cookie.indexOf("ModalShownTest=true")<0) {
         //$("#myModal").modal("show");
-      $("#myModal").modal({
+	    showModal('disclaimer');
+     /* $("#myModal").modal({
                         backdrop: 'static',
                         keyboard: true, 
                         show: true
-                });
+                });*/
         //Modal has been shown, now set a cookie so it never comes back
         $("#myModalClose").click(function () {
             $("#myModal").modal("hide");
         });
-        document.cookie = "ModalShown=true";
+        document.cookie = "ModalShownTest=true";
     }
 });
 /*End Custom Javascript*/
