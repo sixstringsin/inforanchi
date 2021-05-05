@@ -190,8 +190,8 @@ function showModal(context,name,url) {
 	  console.log(context);
     $(myModal).one('shown.bs.modal', function (e) {
 	console.log('modal shown')
-	setTimeout(function(){$(myModal).modal("hide");},3000);
-        setTimeout(redirectExternal,3000,url);
+	setTimeout(function(){$(myModal).modal("hide");},5000);
+        setTimeout(redirectExternal,5000,url);
     })
   }
 }
