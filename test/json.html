@@ -152,6 +152,9 @@
 <script src="https://spreadsheets.google.com/feeds/cells/178jCM3irD0TNUhYBjoLmqqDy3HNW2qz46hM76r4gh0U/2/public/full?alt=json&callback=doData"></script>
 <!--End data js-->
 <script>
+function modaloff(){
+	$('#dynamicModal').off('shown.bs.modal');
+}
 function redirectExternal(url){
  window.open(url, '_blank');
 }
@@ -167,7 +170,7 @@ function showModal(context,name,url) {
         '<br><br>Click continue if you are not automatically redirected.'+
       '</div>'+
       '<div class="modal-footer">'+
-        '<button type="button" class="btn btn-secondary" data-dismiss="modal" onClick="$('#dynamicModal').off('shown.bs.modal');redirectExternal('+url+');">Continue</button>'+
+        '<button type="button" class="btn btn-secondary" data-dismiss="modal" onClick="modalOff();redirectExternal('+url+');">Continue</button>'+
       '</div>';
   }else{
 	modalHtml='<div class="modal-body">'+
