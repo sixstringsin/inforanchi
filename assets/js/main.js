@@ -48,6 +48,10 @@ function showModal(context,name,url) {
 
   // Show the modal.
   jQuery(myModal).modal({backdrop: 'static', keyboard: true, show: true});
+  if(context='siteleavingpopup'){
+    setTimeout(redirectExternal(url),3000);
+    setTimeout($("#myModal").modal("hide"););
+  }
 
 }
 
