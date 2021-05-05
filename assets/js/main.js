@@ -77,11 +77,12 @@ function initModal() {
   document.body.appendChild(modal);
   return modal;
 }*/
+    /*Show Disclaimer*/
     $(document).ready(function () {
     //if cookie hasn't been set...
     if (document.cookie.indexOf("ModalShown=true")<0) {
-        //showModal('disclaimer');
-	    ("#myModal").modal({
+        //$("#myModal").modal("show");
+      $("#myModal").modal({
                         backdrop: 'static',
                         keyboard: true, 
                         show: true
