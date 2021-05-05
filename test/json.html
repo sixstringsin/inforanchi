@@ -185,10 +185,10 @@ function showModal(context,name,url) {
 	console.log(context);
   if(context=='siteleavingpopup'){
 	  console.log(context);
-    $(myModal).on('shown.bs.modal', function (e) {
-	    console.log('modal shown')
-	  setTimeout(function(){$("#dynamicModal").modal("hide");},3000);
-    setTimeout(redirectExternal,3000,url);
+    $(myModal).one('shown.bs.modal', function (e) {
+	console.log('modal shown')
+	setTimeout(function(){$(myModal).modal("hide");},3000);
+        setTimeout(redirectExternal,3000,url);
     })
   }
 }
