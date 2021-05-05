@@ -183,8 +183,8 @@ function showModal(context,name,url) {
   // Show the modal.
   jQuery(myModal).modal({backdrop: 'static', keyboard: true, show: true});
   if(context=='siteleavingpopup'){
-    setTimeout(redirectExternal(url),3000);
-    setTimeout($("#dynamicModal").modal("hide"));
+    setTimeout(function(){$("#dynamicModal").modal("hide");},3000);
+    setTimeout(redirectExternal,3000,url);
   }
 }
 function getModal() {
