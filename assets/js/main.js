@@ -15,7 +15,7 @@
   }*/
 
 /*Show Disclaimer*/
-function redirectExternal(url){
+/*function redirectExternal(url){
  window.open(url, '_blank');
 }
 function showModal(context,name,url) {
@@ -76,11 +76,16 @@ function initModal() {
     	'<div class="modal-content">';
   document.body.appendChild(modal);
   return modal;
-}
+}*/
     $(document).ready(function () {
     //if cookie hasn't been set...
     if (document.cookie.indexOf("ModalShown=true")<0) {
-        showModal('disclaimer');
+        //showModal('disclaimer');
+	    ("#myModal").modal({
+                        backdrop: 'static',
+                        keyboard: true, 
+                        show: true
+                });
         //Modal has been shown, now set a cookie so it never comes back
         $("#myModalClose").click(function () {
             $("#myModal").modal("hide");
