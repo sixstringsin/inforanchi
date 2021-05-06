@@ -150,7 +150,8 @@
 <!--Include for pages showing data-->
 <!--<script src="/assets/js/sheets.js"></script>-->
   <script>
-	var spData = null;
+  var spData = null;
+	  var firstRow=false;
   function doData(json) {
       spData = json.feed.entry;
   }
@@ -158,9 +159,9 @@
   function drawCell(tr, val, column) {
       var td = $("<td/>");
       tr.append(td);
-      if(column==1){
+      if(!firstRow && column==1){
 	var str=val.split(",");
-	  var text;
+	  var text="";
 	  console.log(str);
 	  for (i = 0; i < str.length; i++) {
 		text += "<a href='tel:"+str[i]+"'>"+str[i]+"</a>&nbsp;";
@@ -178,6 +179,7 @@
 	  for(var c=0; c<rowData.length; c++) {
 		  drawCell(tr, rowData[c], c);
 	  }
+	  firstRow=false;
 	  return tr;
   }
   
