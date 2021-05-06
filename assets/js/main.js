@@ -24,7 +24,7 @@ var sendtoga = function(category, value, call) {
   });
 }
 //Tag all tel: elements to trigger a contact event
-$("a[href^='tel:']").one("click",sendtoga('Contact',window.location,'');
+$("a[href^='tel:']").one("click",sendtoga('Contact',event.target.text,''));
 /*end ga*/
 
 /*Show Disclaimer*/
@@ -32,7 +32,7 @@ function modaloff(){
 	$('#dynamicModal').off('shown.bs.modal');
 }
 function redirectExternal(url){
- sendtoga('Outbound Link',url,'');
+ sendtoga('outbound',url,'');
  window.open(url, '_blank');
 }
 function showModal(context,name,url) {
