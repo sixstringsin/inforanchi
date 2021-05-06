@@ -23,6 +23,8 @@ var sendtoga = function(category, value, call) {
     'event_callback': call
   });
 }
+//Tag all tel: elements to trigger a contact event
+$("a[href^='tel:']").one("click",sendtoga('Contact',window.location,'');
 /*end ga*/
 
 /*Show Disclaimer*/
@@ -30,6 +32,7 @@ function modaloff(){
 	$('#dynamicModal').off('shown.bs.modal');
 }
 function redirectExternal(url){
+ sendtoga('Outbound Link',url,'');
  window.open(url, '_blank');
 }
 function showModal(context,name,url) {
