@@ -1,12 +1,25 @@
   var spData = null;
+  var firstRow=true;
   function doData(json) {
       spData = json.feed.entry;
   }
   
-  function drawCell(tr, val) {
+  function drawCell(tr, val, column) {
       var td = $("<td/>");
       tr.append(td);
-      td.append(val);
+      if(!firstRow && column==1){
+	var str=val.split(",");
+	  var text="";
+	  console.log(str);
+	  for (i = 0; i < str.length; i++) {
+		if(str[i]) {str[i]=str[i].trim();}
+		text += "<a href='tel:"+str[i]+"'>"+str[i]+"</a>&nbsp;&nbsp;";
+	 }
+	}
+	  else{
+		  text=val;
+	  }
+      td.append(text);
       return td;
   }
 	
@@ -16,8 +29,9 @@
 	  var tr = $("<tr/>");
 	  table.append(tr);
 	  for(var c=0; c<rowData.length; c++) {
-		  drawCell(tr, rowData[c]);
+		  drawCell(tr, rowData[c], c);
 	  }
+	  firstRow=false;//th has been created
 	  return tr;
   }
   
