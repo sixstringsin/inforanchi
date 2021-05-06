@@ -151,7 +151,7 @@
 <!--<script src="/assets/js/sheets.js"></script>-->
   <script>
   var spData = null;
-	  var firstRow=false;
+  var firstRow=true;
   function doData(json) {
       spData = json.feed.entry;
   }
@@ -164,6 +164,7 @@
 	  var text="";
 	  console.log(str);
 	  for (i = 0; i < str.length; i++) {
+		if(str[i]) {str[i]=str[i].trim();}
 		text += "<a href='tel:"+str[i]+"'>"+str[i]+"</a>&nbsp;";
 	 }
 	}
@@ -179,7 +180,7 @@
 	  for(var c=0; c<rowData.length; c++) {
 		  drawCell(tr, rowData[c], c);
 	  }
-	  firstRow=false;
+	  firstRow=false;//th has been created
 	  return tr;
   }
   
