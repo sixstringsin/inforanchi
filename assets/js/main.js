@@ -14,6 +14,17 @@
     doctwitter.body.innerHTML = doctwitter.body.innerHTML + '<style>.timeline-Viewport{overflow:hidden}</style>';
   }*/
 
+/*Google analytics*/
+var sendtoga = function(category, value, call) {
+  gtag('event', 'click', {
+    'event_category': category,
+    'event_label': value,
+    'transport_type': 'beacon',
+    'event_callback': call
+  });
+}
+/*end ga*/
+
 /*Show Disclaimer*/
 function modaloff(){
 	$('#dynamicModal').off('shown.bs.modal');
