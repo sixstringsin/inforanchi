@@ -46,15 +46,15 @@ for ( var lang in ath.intl ) {
 ath.defaults = {
 	appID: 'org.cubiq.addtohome',		// local storage name (no need to change)
 	fontSize: 15,				// base font size, used to properly resize the popup based on viewport scale factor
-	debug: true,				// override browser checks
+	debug: false,				// override browser checks
 	logging: true,				// log reasons for showing or not showing to js console; defaults to true when debug is true
 	modal: false,				// prevent further actions until the message is closed
 	mandatory: false,			// you can't proceed if you don't add the app to the homescreen
 	autostart: true,			// show the message automatically
 	skipFirstVisit: false,		// show only to returning visitors (ie: skip the first time you visit)
-	startDelay: 1,				// display the message after that many seconds from page load
-	lifespan: 1500,				// life of the message in seconds
-	displayPace: 0,			// minutes before the message is shown again (0: display every time, default 24 hours) default 1440
+	startDelay: 2,				// display the message after that many seconds from page load
+	lifespan: 10,				// life of the message in seconds
+	displayPace: 1440,			// minutes before the message is shown again (0: display every time, default 24 hours) default 1440
 	maxDisplayCount: 0,			// absolute maximum number of times the message will be shown to the user (0: no limit)
 	icon: true,					// add touch icon to the message
 	message: '',	// the message can be customized
@@ -149,7 +149,7 @@ ath.Class = function (options) {
 	// setup the debug environment
 	if ( this.options.debug ) {
 		ath.isCompatible = true;
-		ath.OS = 'ios';//typeof this.options.debug == 'string' ? this.options.debug : ath.OS == 'unsupported' ? 'android' : ath.OS;
+		ath.OS = typeof this.options.debug == 'string' ? this.options.debug : ath.OS == 'unsupported' ? 'android' : ath.OS;
 		ath.OSVersion = ath.OS == 'ios' ? '8' : '4';
 	}
 
