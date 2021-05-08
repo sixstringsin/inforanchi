@@ -182,7 +182,7 @@
 }
 
 .ath-ios.ath-phone:after {
-	content: '';
+	/*content: '';*/
 	background: #eee;
 	position: absolute;
 	width: 2em;
