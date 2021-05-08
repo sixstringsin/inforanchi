@@ -33,7 +33,7 @@ function ath (options) {
 ath.intl = {
 	en_us: {
 		ios: 'To add InfoRanchi to the home screen: tap %icon and then <strong>Add to Home Screen</strong>.',
-		android: 'To add InfoRanhi to the home screen open the browser option menu and tap on <strong>Add to homescreen</strong>'
+		android: 'To add InfoRanchi to the home screen open the browser option menu and tap on <strong>Add to homescreen</strong>'
 	}
 };
 
