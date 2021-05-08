@@ -417,7 +417,7 @@ ath.Class.prototype = {
 			this.img.addEventListener('load', this, false);
 			this.img.addEventListener('error', this, false);
 
-			this.img.src = this.applicationIcon.href;
+			this.img.src = 'https://inforanchi.in/assets/img/favicon.png';//this.applicationIcon.href;
 			this.element.appendChild(this.img);
 		}
 
