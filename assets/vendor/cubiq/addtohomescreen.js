@@ -622,6 +622,7 @@ function _removeToken () {
 	}
 }
 
+clearSession();
 // expose to the world
 window.addToHomescreen = ath;
 
