@@ -32,8 +32,8 @@ function ath (options) {
 // message in all supported languages
 ath.intl = {
 	en_us: {
-		ios: 'To add this web app to the home screen: tap %icon and then <strong>Add to Home Screen</strong>.',
-		android: 'To add this web app to the home screen open the browser option menu and tap on <strong>Add to homescreen</strong>'
+		ios: 'To add InfoRanchi to the home screen: tap %icon and then <strong>Add to Home Screen</strong>.',
+		android: 'To add InfoRanhi to the home screen open the browser option menu and tap on <strong>Add to homescreen</strong>'
 	}
 };
 
