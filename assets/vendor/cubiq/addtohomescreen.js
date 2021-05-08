@@ -33,7 +33,7 @@ function ath (options) {
 ath.intl = {
 	en_us: {
 		ios: 'To add this web app to the home screen: tap %icon and then <strong>Add to Home Screen</strong>.',
-		android: 'To add this web app to the home screen open the browser option menu and tap on <strong>Add to homescreen</strong>. <small>The menu can be accessed by pressing the menu hardware button if your device has one, or by tapping the top right menu icon %icon.</small>'
+		android: 'To add this web app to the home screen open the browser option menu and tap on <strong>Add to homescreen</strong>'
 	}
 };
 
@@ -53,11 +53,11 @@ ath.defaults = {
 	autostart: true,			// show the message automatically
 	skipFirstVisit: false,		// show only to returning visitors (ie: skip the first time you visit)
 	startDelay: 1,				// display the message after that many seconds from page load
-	lifespan: 15,				// life of the message in seconds
+	lifespan: 1500,				// life of the message in seconds
 	displayPace: 0,			// minutes before the message is shown again (0: display every time, default 24 hours) default 1440
 	maxDisplayCount: 0,			// absolute maximum number of times the message will be shown to the user (0: no limit)
 	icon: true,					// add touch icon to the message
-	message: '',				// the message can be customized
+	message: 'Add InfoRanchi to Home Screen',	// the message can be customized
 	validLocation: [],			// list of pages where the message will be shown (array of regexes)
 	onInit: null,				// executed on instance creation
 	onShow: null,				// executed when the message is shown
@@ -65,7 +65,7 @@ ath.defaults = {
 	onAdd: null,				// when the application is launched the first time from the homescreen (guesstimate)
 	onPrivate: null,			// executed if user is in private mode
 	privateModeOverride: false,	// show the message even in private mode (very rude)
-	detectHomescreen: false		// try to detect if the site has been added to the homescreen (false | true | 'hash' | 'queryString' | 'smartURL')
+	detectHomescreen: true		// try to detect if the site has been added to the homescreen (false | true | 'hash' | 'queryString' | 'smartURL')
 };
 
 // browser info and capability
