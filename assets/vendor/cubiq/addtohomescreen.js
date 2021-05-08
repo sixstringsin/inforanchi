@@ -32,7 +32,7 @@ function ath (options) {
 // message in all supported languages
 ath.intl = {
 	en_us: {
-		ios: 'To add InfoRanchi to the home screen: <span class="ath-action-icon">TAP HERE</span> and then <strong>Add to Home Screen</strong>.',
+		ios: 'To add InfoRanchi to the home screen: tap <span class="ath-action-icon">%icon</span> and then <strong>Add to Home Screen</strong>.',
 		android: 'To add InfoRanchi to the home screen open the browser option menu and tap on <strong>Add to homescreen</strong>'
 	}
 };
