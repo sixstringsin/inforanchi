@@ -225,9 +225,10 @@ ath.Class = function (options) {
 		if ( !this.session.added ) {
 			this.session.added = true;
 			this.updateSession();
+			
+			sendtoga('addtohomescreen-added',ath.hasLocalStorage,'');
 
 			if ( this.options.onAdd && ath.hasLocalStorage ) {	// double check on localstorage to avoid multiple calls to the custom event
-				sendtoga('addtohomescreen-added','','');
 				this.options.onAdd.call(this);
 			}
 		}
