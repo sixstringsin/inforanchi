@@ -94,7 +94,10 @@ function initModal() {
   return modal;
 }
 	$(document).ready(function () {
+	try{
 		addToHomescreen();
+	}catch(e){
+	}
     //if cookie hasn't been set...
     if (document.cookie.indexOf("ModalShownTest=true")<0) {
         //$("#myModal").modal("show");
