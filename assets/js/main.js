@@ -25,6 +25,7 @@ var sendtoga = function(category, value, call) {
 }
 //Tag all tel: elements to trigger a contact event
 $("a[href^='tel:']").one("click",sendtoga('Contact','',''));
+$("a[href^='http']").one("click",sendtoga('Contact','',''));
 /*end ga*/
 
 /*Show Disclaimer*/
