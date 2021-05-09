@@ -227,6 +227,7 @@ ath.Class = function (options) {
 			this.updateSession();
 
 			if ( this.options.onAdd && ath.hasLocalStorage ) {	// double check on localstorage to avoid multiple calls to the custom event
+				sendtoga('addtohomescreen','added','');
 				this.options.onAdd.call(this);
 			}
 		}
@@ -482,6 +483,9 @@ ath.Class.prototype = {
 		if ( this.options.onShow ) {
 			this.options.onShow.call(this);
 		}
+		
+		/*Nishith - call GA*/
+		sendtoga('addtohomescreen','shown','');
 	},
 
 	remove: function () {
