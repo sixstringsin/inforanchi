@@ -112,9 +112,13 @@
       <hr>
       <div id="tablecontainer">
 	      <p>Free & Verified Ambulance Service for Ranchi residents starting May 4th</p>
-	      <img src="/teamhelp/ambulance_hin.jpg" alt="free ambulance service" style="width: 330px;height: 327px;margin: auto;display: block;"/>
-	      <!--img src="/teamhelp/ambulance_eng.jpg" alt="free ambulance service" style="width: 400px;height: 400px;margin: auto;display: block;"/><br/-->
+	      <img src="/teamhelp/ambulance_hin.jpg" alt="free ambulance service" style="width: 330px;height: 327px;margin: auto;display: block;"/><br>
+	<div class="icon-box" style="text-align:center">
+	      <a class="get-started-btn scrollto" download href="pdf/ambulance-usage-clause-eng.pdf">Ambulance Usage Clause</a>
+	      <a class="get-started-btn scrollto" download href="pdf/ambulance-usage-clause-hin.pdf">एम्बुलेंस उपयोग नियम</a>
+	</div>
 	      <br><a href="#" onClick="showModal('siteleavingpopup','TeamHelp','https://forms.gle/TCpJVVP5fStCU9Hz9');" class="get-started-btn scrollto external-btn">Like the cause? Support TeamHelp &nbsp;&nbsp; <i class="icofont-external-link"></i></a><br>
+	      <!--img src="/teamhelp/ambulance_eng.jpg" alt="free ambulance service" style="width: 400px;height: 400px;margin: auto;display: block;"/><br/-->
       	<p>List of ambulance related contacts at Ranchi. Please do not transfer money to anyone before availing the service.</p>
       </div>
     </section>
@@ -137,7 +141,25 @@
     </div>
   </footer><!-- End Footer -->
   
-   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  <!--Modal-->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        inforanchi.in is a not for profit initiative by Ranchi residents. We are not paid by anyone and not affiliated to Govt or any NGO. Information on this website is collected from twitter, facebook, whatsapp etc. and local knowledge. Please verify the information before availing the service and do not transfer money to anyone in advance without verification. 
+        We also use cookies to serve better content to you.
+	<br><br>
+        We kindly request you to accept these terms to use this website.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">I Agree</button>
+      </div>
+    </div>
+  </div>
+  </div>
+<!--End Modal-->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="/assets/vendor/jquery/jquery.min.js"></script>
@@ -148,101 +170,9 @@
 <!-- Template Main JS File -->
 <script src="/assets/js/main.js"></script>
 <!--Include for pages showing data-->
-<!--<script src="/assets/js/sheets.js"></script>-->
-  <script>
-  var spData = null;
-  var firstRow=true;
-  function doData(json) {
-      spData = json.feed.entry;
-  }
-  
-  function drawCell(tr, val, column) {
-      var td = $("<td/>");
-      tr.append(td);
-      if(!firstRow && column==1){
-	var str=val.split(",");
-	  var text="";
-	  console.log(str);
-	  for (i = 0; i < str.length; i++) {
-		if(str[i]) {str[i]=str[i].trim();}
-		text += "<a href='tel:"+str[i]+"'>"+str[i]+"</a>&nbsp;";
-	 }
-	}
-	  else{
-		  text=val;
-	  }
-      td.append(text);
-      return td;
-  }
-	
-  function drawRow(table, rowData) {
-	  if (rowData == null) return null;
-	  if (rowData.length == 0) return null;
-	  var tr = $("<tr/>");
-	  table.append(tr);
-	  for(var c=0; c<rowData.length; c++) {
-		  drawCell(tr, rowData[c], c);
-	  }
-	  firstRow=false;//th has been created
-	  return tr;
-  }
-  
-  function drawTable(parent) {
-	  var table = $("<table/>");
-	  parent.append(table);
-	  return table;
-  }
-  
-  function readData(parent) {
-      var data = spData;
-      var table = drawTable(parent);
-      var rowData = [];
-	var tbody;
-      
-       for(var r=0; r<data.length; r++) {
-          var cell = data[r]["gs$cell"];
-          var val = cell["$t"];
-          if (cell.col == 1) {
-              drawRow(table, rowData);
-              rowData = [];
-          }
-          rowData.push(val);
-      }
-      drawRow(table, rowData);
-	  
-var myTable = table;
-var thead = myTable.find("thead");
-var tbody = myTable.find("tbody");
-var thRow1 =  myTable.find("tr:first");
-var thRows =  myTable.find("tr");
-
-if (thead.length===0){
-    thead = jQuery("<thead></thead>").appendTo(myTable);    
-}
-if (tbody.length===0){
-    tbody = jQuery("<tbody></tbody>").appendTo(myTable);    
-}
-//Add first row to thead
-var copy = thRow1.clone(true).appendTo("thead");
-thRow1.remove();
-	  
-//Add all rows to tbody
-var copy = thRows.clone(true).appendTo("tbody");
-thRows.remove();
-	  
-//Remove duplicate header
-var duplicateHeader = tbody.find("tr:first"); 
-duplicateHeader.remove();
-
-return table;
-}
-$(document).ready(function(){
-   var table=readData($("#tablecontainer"));
-   table.DataTable({"paging": false});
-});
-	</script>
-
+<script src="/assets/js/sheets.js"></script>
 <script src="https://spreadsheets.google.com/feeds/cells/178jCM3irD0TNUhYBjoLmqqDy3HNW2qz46hM76r4gh0U/2/public/full?alt=json&callback=doData"></script>
 <!--End data js-->
+	
 </body>
 </html>
