@@ -16,7 +16,7 @@
   <title>Ranchi Covid Information | Corona related contacts for Ranchi</title>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta name="description" content="Verified contacts in Ranchi for Oxygen, COVID testing labs, Ambulance, Hospitals, Meal Service, Grocery Delivery for COVID patients, medicine home delivery, free doctors on-call/whatsapp consultation for any covid/general health problems">
+  <meta name="description" content="Verified contacts in Ranchi for Oxygen, RTPCR, HRCT, Ambulance, Hospitals, Meal Service, Grocery Delivery, Medicine delivery, Free Doctor consultation">
   <link rel="canonical" href="https://inforanchi.in" />
   <!-- Favicons -->
   <link href="//assets/img/favicon.png" rel="icon">
@@ -46,22 +46,33 @@
   <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
   <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <!--<link href="/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="/assets/vendor/owl.carousel//assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="/assets/vendor/venobox/venobox.css" rel="stylesheet">-->
+  <link rel="stylesheet" type="text/css" href="/assets/vendor/cubiq/addtohomescreen.css">
 
   <!-- Template Main CSS File -->
   <link href="/assets/css/style.css" rel="stylesheet">
+	
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WGP5DCB');</script>
+<!-- End Google Tag Manager -->
 </head>
 
 <body>
-  <!-- ======= Top Bar ======= --
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGP5DCB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <!-- ======= Top Bar ======= -->
   <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
     <div class="container d-flex">
       <div class="contact-info mr-auto">
         <!--<i class="icofont-envelope"></i> <a href="mailto:contact@example.com">contact@example.com</a>
         <i class="icofont-phone"></i> <a target="_blank" href="https://ranchi.nic.in/covid/">Jharkhand Covid Portal</a>-->
-      <!--Share This Website: 
+      Share This Website: 
       <a href="https://www.facebook.com/sharer/sharer.php?u=https://inforanchi.in" target="_blank"><i class="icofont-facebook"></i></a>
       <a href="https://twitter.com/intent/tweet?url=https://inforanchi.in&amp;text=A%20group%20of%20friends%20trying%20to%20aggregate%20Covid%20help%20related%20information%20specific%20to%20Ranchi." target="_blank"><i class="icofont-twitter"></i></a>
       <a href="https://www.instagram.com/" target="_blank"><i class="icofont-instagram"></i></a>
@@ -75,31 +86,31 @@
         <!--<a href="#" class="facebook"><i class="icofont-facebook"></i></a>
         <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
         <a href="#" class="skype"><i class="icofont-skype"></i></a>
-        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>--
+        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>-->
       </div>
     </div>
-  </div>-->
+  </div>
 
   <!-- ======= Header ======= -->
- <!-- <header id="header" class="fixed-top">
+  <header id="header" class="fixed-top">
   <div class="container d-flex align-items-center">
 
       <h1 class="logo mr-auto"><a href="index.html">Ranchi Covid Info</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo mr-auto"><img src="/assets/img/logo.png" alt="" class="img-fluid"></a>--
+      <!-- <a href="index.html" class="logo mr-auto"><img src="/assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li><a href="/index" class="active">Home</a></li>
-          <li class="drop-down"><a href="/covid-medical-info">Medical Contacts</a>
+          <li class="drop-down"><a href="">Medical Contacts</a>
 	    <ul>
         <li><a href="oxygen">Oxygen Contacts</a></li>
-	      <li><a href="other-info">Ambulance</a></li>
-	      <li><a href="other-info">On Call Doctors</a></li>
-	      <li><a href="other-info">Medicine Home Delivery</a></li>
-              <li><a href="laboratory">Laboratory Testing</a></li>
-              <li><a href="other-info">Hospital</a></li>
-	      <li><a href="other-info">CT Scan</a></li>
+	      <li><a href="/ambulance">Ambulance</a></li>
+	      <li><a href="/doctors">On Call Doctors</a></li>
+	      <li><a href="/medicine">Medicine Home Delivery</a></li>
+              <li><a href="/laboratory">Laboratory Testing</a></li>
+              <li><a href="/hospital">Hospital</a></li>
+	      <li><a href="/radiology">CT Scan</a></li>
 	     </ul>
 	  </li>
           <li><a href="/donateblood">Blood Donation</a></li>
@@ -113,7 +124,7 @@
             </ul>
           </li>
         </ul>
-      </nav><!-- .nav-menu --
+      </nav><!-- .nav-menu -->
 
       <a href="index#about" class="get-started-btn scrollto hideonmobile">I want to help!</a>
 
@@ -121,47 +132,59 @@
   </header>
   <!-- End Header -->
 
-  <!-- ======= Hero Section ======= --
+  <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
 
       <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
       <div class="carousel-inner" role="listbox">
-        <!-- Slide 1 --
-        <div class="carousel-item active" style="background-image: url(/assets/img/slide/slide-6.jpg)">
+	      
+        <!-- Slide 1 Support TeamHELP -->
+        <div class="carousel-item active" style="background-image: url(/assets/img/slide/slide-4.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Support TeamHelp for the fight against COVID</h2>
+              <p class="animate__animated animate__fadeInUp">Click on link below</p>
+              <a href="#" onclick="showModal('siteleavingpopup','TeamHelp','https://forms.gle/TCpJVVP5fStCU9Hz9');" class="btn-get-started animate__animated animate__fadeInUp scrollto">Support TeamHelp &nbsp;&nbsp; <i class="icofont-external-link"></i></a>
+            </div>
+          </div>
+        </div>
+	      
+        <!-- Slide 1 -->
+        <div class="carousel-item" style="background-image: url(/assets/img/slide/slide-6.jpg)">
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Donate Before Vaccinate</h2>
               <p class="animate__animated animate__fadeInUp">Donate blood to help avoid a possible blood shortage</p>
-              <a href="donateblood" class="btn-get-started animate__animated animate__fadeInUp scrollto" style="background:red">Learn More</a>
+              <a href="/donateblood" class="btn-get-started animate__animated animate__fadeInUp scrollto" style="background:red">Learn More</a>
             </div>
           </div>
         </div>
         
-        <!-- Slide 1 --
+        <!-- Slide 1 -->
         <div class="carousel-item" style="background-image: url(/assets/img/slide/slide-1.jpg)">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Covid Related Medical Help Information</h2>
-              <p class="animate__animated animate__fadeInUp">Contacts for hospitals, oxygen, ambulance, laboratories</p>
-              <a href="covid-medical-info" class="btn-get-started animate__animated animate__fadeInUp scrollto">Click Here</a>
+              <h2 class="animate__animated animate__fadeInDown">Free Ambulance Service</h2>
+              <p class="animate__animated animate__fadeInUp">Also find paid ambulance services</p>
+              <a href="/ambulance" class="btn-get-started animate__animated animate__fadeInUp scrollto">Click Here</a>
             </div>
           </div>
         </div>
         
-        <!-- Slide 2 --
+        <!-- Slide 2 -->
         <div class="carousel-item" style="background-image: url(/assets/img/slide/slide-2.jpg)">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Doctors and Medicine</h2>
-              <p class="animate__animated animate__fadeInUp">Doctors on Call/Video, Medicine Delivery Information</p>
-              <a href="covid-doctor-medicine.html" class="btn-get-started animate__animated animate__fadeInUp scrollto">Click Here</a>
+              <h2 class="animate__animated animate__fadeInDown">Verified Oxygen Contacts</h2>
+              <p class="animate__animated animate__fadeInUp">Daily verification done by TeamHelp</p>
+              <a href="/oxygen" class="btn-get-started animate__animated animate__fadeInUp scrollto">Click Here</a>
             </div>
           </div>
         </div>
         
-        <!-- Slide 3 --
+        <!-- Slide 3 -->
         <div class="carousel-item" style="background-image: url(/assets/img/slide/slide-3.jpg)">
           <div class="carousel-container">
             <div class="container">
@@ -172,7 +195,7 @@
           </div>
         </div>
         
-        <!-- Slide 4 --
+        <!-- Slide 4 -->
         <div class="carousel-item" style="background-image: url(/assets/img/slide/slide-4.jpg)">
           <div class="carousel-container">
             <div class="container">
@@ -197,155 +220,28 @@
 
     </div>
   </section><!-- End Hero -->
-<section id="hero">
-  <div class="container">
-    <div class="row">
-        <div class="col-lg-3 col-sm-6 width-fifty">
-            <div class="card-box bg-blue">
-                <div class="inner">
-                    <h3>Oxygen</h3>
-                    <p>Verified Daily</p>
-                </div>
-                <div class="icon">
-                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                </div>
-                <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-        </div>
 
-        <div class="col-lg-3 col-sm-6 width-fifty">
-            <div class="card-box bg-green">
-                <div class="inner">
-                    <h3>Ambulance</h3>
-                    <p>Free & Paid Service</p>
-                </div>
-                <div class="icon">
-                    <i class="fa fa-money" aria-hidden="true"></i>
-                </div>
-                <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 width-fifty">
-            <div class="card-box bg-orange">
-                <div class="inner">
-                    <h3>Doctor</h3>
-                    <p>Volunteers & Paid Services</p>
-                </div>
-                <div class="icon">
-                    <i class="fa fa-user-plus" aria-hidden="true"></i>
-                </div>
-                <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 width-fifty">
-            <div class="card-box bg-red">
-                <div class="inner">
-                    <h3>Medicine</h3>
-                    <p>Home Delivery</p>
-                </div>
-                <div class="icon">
-                    <i class="fa fa-users"></i>
-                </div>
-                <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-        </div>
-	    <div class="col-lg-3 col-sm-6 width-fifty">
-            <div class="card-box bg-red">
-                <div class="inner">
-                    <h3>Laboratory</h3>
-                    <p>RT PCR & More</p>
-                </div>
-                <div class="icon">
-                    <i class="fa fa-users"></i>
-                </div>
-                <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-        </div>
-	<div class="col-lg-3 col-sm-6 width-fifty">
-            <div class="card-box bg-red">
-                <div class="inner">
-                    <h3>Hospital</h3>
-                    <p>Contacts and Bed Availability</p>
-                </div>
-                <div class="icon">
-                    <i class="fa fa-users"></i>
-                </div>
-                <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-        </div>
-	<div class="col-lg-3 col-sm-6 width-fifty">
-            <div class="card-box bg-red">
-                <div class="inner">
-                    <h3>Radiology</h3>
-                    <p>CT Scan and More</p>
-                </div>
-                <div class="icon">
-                    <i class="fa fa-users"></i>
-                </div>
-                <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-        </div>    
-    </div>
-<div class="row">
-	  <div class="col-lg-3 col-sm-6 width-fifty">
-            <div class="card-box bg-red">
-                <div class="inner">
-                    <h3>Meal and Grocery</h3>
-                    <p>Home Delivery</p>
-                </div>
-                <div class="icon">
-                    <i class="fa fa-users"></i>
-                </div>
-                <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-        </div>
-	<div class="col-lg-3 col-sm-6 width-fifty">
-            <div class="card-box bg-red">
-                <div class="inner">
-                    <h3>Twitter Search</h3>
-                    <p>External Tools - No Twitter Account</p>
-                </div>
-                <div class="icon">
-                    <i class="fa fa-users"></i>
-                </div>
-                <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-        </div>
-	<div class="col-lg-3 col-sm-6 width-fifty">
-            <div class="card-box bg-red">
-                <div class="inner">
-                    <h3>More Resources</h3>
-                    <p>Jharkhand/India Resources</p>
-                </div>
-                <div class="icon">
-                    <i class="fa fa-users"></i>
-                </div>
-                <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-        </div>
-</div>
-</div>
-	</section>
   <main id="main">
    <!--Team Help Section-->
     <section id="featured-services" class="featured-services section-bg">
    <div class="container">
-      <div class="section-title" style="padding-bottom: 0px;font-size:14px;color:#919191">Latest from <img src="/assets/img/teamhelplogo.jpeg" style="width: 50px;height: 35px;"></div>
+      <div class="section-title" style="padding-bottom: 0px;font-size:14px;color:#919191">Latest posts from <img src="/assets/img/teamhelplogo.jpeg" alt="team help NGO in Ranchi" style="width: 50px;height: 35px;"></div>
       <div class="row no-gutters">
         <div class="col-lg-4 col-md-6">
             <div class="icon-box" style="text-align:center">
-               <a href="donateblood"><img src="/donateblood/blood_donation_appeal.jpg" style="max-width: -webkit-fill-available;"></a>
-               <a href="donateblood" class="get-started-btn scrollto" style="margin:0 0 0 0">Learn More</a>
+               <!--<a href="donateblood"><img src="/donateblood/blood_donation_appeal.jpg" alt="Blood and plasma donation" style="max-width: -webkit-fill-available;max-width:-moz-available;max-width:fill-available;"></a>
+               <a href="donateblood" class="get-started-btn scrollto" style="margin:0 0 0 0">Learn More</a>-->
+		   <img src="/teamhelp/donate-your-extras.webp" alt="Donate your extras" style="max-width: -webkit-fill-available;max-width:-moz-available;max-width:fill-available;"> 
             </div>
          </div> 
         <div class="col-lg-4 col-md-6">
             <div class="icon-box">
-               <img src="/teamhelp/Oxygen_contacts.jpg" style="max-width: -webkit-fill-available;">
+               <img src="/teamhelp/Oxygen_contacts.jpg" alt="Verified oxygen contacts in Ranchi" style="max-width: -webkit-fill-available;max-width:-moz-available;max-width:fill-available;">
             </div>
          </div>
          <div class="col-lg-4 col-md-6">
             <div class="icon-box">
-               <img src="/teamhelp/doc_consultation_contacts.jpg" style="max-width: -webkit-fill-available;">
+               <img src="/teamhelp/doc_consultation_contacts.jpg" alt="Free doctor consultation contacts" style="max-width: -webkit-fill-available;max-width:-moz-available;max-width:fill-available">
             </div>
          </div>
       </div>
@@ -388,43 +284,37 @@
 
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
-      <div class="container">
+      <div class="container" id="support">
 
         <div class="section-title">
           <h2>How You Can Help</h2>
-          <p>This is a not for profit initiative by Ranchi residents. We are not paid by anyone and not affiliated to any govt or NGO. Information on this website is collected from twitter, facebook, whatsapp and local knowledge. Please verify the information yourself before availing the service.</p>
+          <p>Why we built this website: For most people the biggest hurdle in getting timely help is lack of proper information and now knowing to know where to find information. The aim of this website is to provide information at one place and to guide where to find additional information.</p>
         </div>
 
         <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" style="text-align:center">
-            <img src="/assets/img/covid-helpline.jpg" class="img-fluid" alt="" style="height:100px;width:284px;margin-bottom:16px;border:dashed;border-color:red">
-	    <p style="color: brown;">Watch this inspirational video and inspire others</p>
-	    <iframe width="450" height="283" src="https://www.youtube-nocookie.com/embed/0oLgzuVLL8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+          <div class="col-lg-6 order-2 order-lg-2" style="text-align:center">
+            <!--img src="/assets/img/covid-helpline.jpg" class="img-fluid" alt="jharkhand covid helpling" style="height:100px;width:284px;margin-bottom:16px;border:dashed;border-color:red"-->
+	    <a href="https://www.youtube.com/watch?v=0oLgzuVLL8c" target="_blank"><img src="/assets/img/inspire.jpg" class="img-fluid" alt="inspire others" style="width:400px"></a>
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>The best way to help is by sharing information!</h3>
-            <p class="font-italic">
-              <i class="icofont-check-circled"></i> For most people the biggest hurdle in getting timely help is lack of proper information and now knowing to know where to find information.
-              <br><br>
-              <i class="icofont-check-circled"></i> To share this website use the links below:
-            </p>
-            <ul>
-              <!--<li><i class="icofont-check-circled"></i> Submit to list your business or helpful information</li>
-              <li><i class="icofont-check-circled"></i> Let us know if some information is not valid anymore</li>
-              <li><i class="icofont-check-circled"></i> General Suggestions</li>-->
-              <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://inforanchi.in" target="_blank"><i class="icofont-facebook"></i>Share on Facebook</a></li>
-              <li><a href="https://www.instagram.com/" target="_blank"><i class="icofont-instagram"></i>Share on Instagram</a></li>
-              <li><a href="https://twitter.com/intent/tweet?url=https://inforanchi.in&text=A%20group%20of%20friends%20trying%20to%20aggregate%20Covid%20help%20related%20information%20specific%20to%20Ranchi." target="_blank"><i class="icofont-twitter"></i>Share on Twitter</a></li>
-              <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://inforanchi.in" target="_blank"><i class="icofont-linkedin"></i>Share on Linkedin</a></li>
-            </ul>
-            <!--<br>
-            <a href="submission" class="get-started-btn scrollto">Submit Here</a>
-            <br>-->
-            <p>
-              <i class="icofont-check-circled"></i> Want to share information for us to display on this website, or want to get something removed?
-              Get in touch on twitter <a target="_blank" href="https://twitter.com/sixstringsin" class="twitter"><i class="icofont-twitter"></i></a>
-              <a target="_blank" href="https://twitter.com/frustrtd_Indian" class="twitter"><i class="icofont-twitter"></i></a>
-            </p>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-1 content" style=" text-align: center;">
+            <h3>The best way to help is by sharing!</h3>
+            <p style="color:gray">
+              <i class="icofont-check-circled"></i>&nbsp;Click an icon to share:<a href="https://www.facebook.com/sharer/sharer.php?u=https://inforanchi.in" target="_blank"><i class="icofont-facebook"></i></a>
+      		&nbsp;<a href="https://twitter.com/intent/tweet?url=https://inforanchi.in&amp;text=A%20group%20of%20friends%20trying%20to%20aggregate%20Covid%20help%20related%20information%20specific%20to%20Ranchi." target="_blank"><i class="icofont-twitter"></i></a>
+      		&nbsp;<a href="https://www.instagram.com/" target="_blank"><i class="icofont-instagram"></i></a>
+      		&nbsp;<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://inforanchi.in" target="_blank"><i class="icofont-linkedin"></i></a>
+              <br>
+              </p>
+            
+            <p style="color:gray"><i class="icofont-check-circled"></i>&nbsp;
+		Verified Oxygen, Doctors Information and Free Ambulance Service on this website is facilitated by TeamHelp Ranchi. TeamHelp is also on the forefront of #DonateBeforeVaccinate blood donation drive. Think its useful?
+	    </p>
+	    <a href="#" onclick="showModal('siteleavingpopup','TeamHelp','https://forms.gle/TCpJVVP5fStCU9Hz9');" class="get-started-btn scrollto external-btn">Like the cause? Support TeamHelp &nbsp;&nbsp; <i class="icofont-external-link"></i></a>
+	    <br>	  
+	    <!--<p class="font-italic"><i class="icofont-check-circled"></i>
+		Want to volunteer for this cause? Expected time spent is less than 1 hour a day.
+	    </p>
+	    <a href="/submission" class="get-started-btn scrollto external-btn">I want to Volunteer</a>-->
           </div>
         </div>
 
@@ -482,80 +372,8 @@
   <script src="/assets/vendor/jquery/jquery.min.js"></script>
   <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="/assets/vendor/cubiq/addtohomescreen.js"></script>
   <!-- Template Main JS File -->
   <script src="/assets/js/main.js"></script>
-  <style>
-body{
-background:#eee;    
-}
-
-.card-box {
-    position: relative;
-    color: #fff;
-    padding: 20px 10px 40px;
-    margin: 20px 0px;
-}
-.card-box:hover {
-    text-decoration: none;
-    color: #f1f1f1;
-}
-.card-box:hover .icon i {
-    font-size: 100px;
-    transition: 1s;
-    -webkit-transition: 1s;
-}
-.card-box .inner {
-    padding: 5px 10px 0 10px;
-}
-.card-box h3 {
-    font-size: 27px;
-    font-weight: bold;
-    margin: 0 0 8px 0;
-    white-space: nowrap;
-    padding: 0;
-    text-align: left;
-}
-.card-box p {
-    font-size: 15px;
-}
-.card-box .icon {
-    position: absolute;
-    top: auto;
-    bottom: 5px;
-    right: 5px;
-    z-index: 0;
-    font-size: 72px;
-    color: rgba(0, 0, 0, 0.15);
-}
-.card-box .card-box-footer {
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    text-align: center;
-    padding: 3px 0;
-    color: rgba(255, 255, 255, 0.8);
-    background: rgba(0, 0, 0, 0.1);
-    width: 100%;
-    text-decoration: none;
-}
-.card-box:hover .card-box-footer {
-    background: rgba(0, 0, 0, 0.3);
-}
-.bg-blue {
-    background-color: #00c0ef !important;
-}
-.bg-green {
-    background-color: #00a65a !important;
-}
-.bg-orange {
-    background-color: #f39c12 !important;
-}
-.bg-red {
-    background-color: #d9534f !important;
-}
-.width-fifty{
-	width:50%;
-	  }
-  </style>
 </body>
 </html>
