@@ -12,7 +12,10 @@
 	  var text="";
 	  for (i = 0; i < str.length; i++) {
 		if(str[i]) {str[i]=str[i].trim();}
-		text += "<a href='tel:"+str[i].replace(/\D/g,'')+"'>"+str[i]+"</a>&nbsp;&nbsp;";
+		if(str[i].startsWith('http')
+		   text += "<a target='_blank' href='"str[i]+"'>"+str[i]+"</a>&nbsp;|&nbsp;";
+		else
+		   text += "<a href='tel:"+str[i].replace(/\D/g,'')+"'>"+str[i]+"</a>&nbsp;|&nbsp;";
 	 }
 	}
 	  else{
