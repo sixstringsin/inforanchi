@@ -39,7 +39,7 @@ function modaloff(){
 }
 function redirectExternal(url){
  sendtoga('outbound',url,'');
- window.open(url, '_blank');
+// window.open(url, '_blank');
 }
 function showModal(context,name,url) {
   var myModal = getModal();
@@ -62,21 +62,22 @@ function showModal(context,name,url) {
 	'<br><br>We kindly request you to accept these terms to use this website.'+
       '</div>'+
       '<div class="modal-footer">'+
-        '<button type="button" class="btn btn-secondary" data-dismiss="modal">I Agree</button>'+
+        '<a class="btn btn-link" data-dismiss="modal">Stay on this page</button
+        '<a href='+url+' class="btn btn-secondary" data-dismiss="modal">I Agree</button>'+
       '</div>';
   }
   setModalContent(modalHtml);
   // Show the modal.
   jQuery(myModal).modal({backdrop: 'static', keyboard: true, show: true});
 	console.log(context);
-  if(context=='siteleavingpopup'){
+  /*if(context=='siteleavingpopup'){
 	  console.log(context);
     $(myModal).one('shown.bs.modal', function (e) {
 	console.log('modal shown')
 	setTimeout(function(){$(myModal).modal("hide");},5000);
-        setTimeout(redirectExternal,5000,url);
+       setTimeout(redirectExternal,5000,url);
     })
-  }
+  }*/
 }
 function getModal() {
   return document.getElementById('dynamicModal');
