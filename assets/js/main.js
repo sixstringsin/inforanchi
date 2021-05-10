@@ -53,8 +53,8 @@ function showModal(context,name,url) {
         '<br><br>Click continue if you are not automatically redirected.'+
       '</div>'+
       '<div class="modal-footer">'+
-	'<a class="btn btn-link" data-dismiss="modal">Stay on this page</button>&nbsp;'+
-        '<a href='+url+' class="btn btn-secondary" data-dismiss="modal" onClick="modalOff();redirectExternal('+url+');">Continue</button>'+
+	'<a class="btn btn-link" data-dismiss="modal">Stay on this page</a>&nbsp;'+
+        '<a href='+url+' class="btn btn-secondary" data-dismiss="modal" onClick="modalOff();redirectExternal('+url+');">Continue</a>'+
       '</div>';
   }else{
 	modalHtml='<div class="modal-body">'+
@@ -63,7 +63,7 @@ function showModal(context,name,url) {
 	'<br><br>We kindly request you to accept these terms to use this website.'+
       '</div>'+
       '<div class="modal-footer">'+
-        '<a class="btn btn-secondary" data-dismiss="modal">I Agree</button>'+
+        '<a class="btn btn-secondary" data-dismiss="modal">I Agree</a>'+
       '</div>';
   }
   setModalContent(modalHtml);
