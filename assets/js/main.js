@@ -24,7 +24,7 @@ var sendtoga = function(category, value, call) {
   });
 }
 //Tag all tel: elements to trigger a contact event
-$("[href^='tel']").one("click",sendtoga('Contact','',''));
+//$("[href^='tel']").one("click",sendtoga('Contact','',''));
 //$("a[href^='http']").one("click",sendtoga('Contact','',''));
 /*end ga*/
 
