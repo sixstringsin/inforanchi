@@ -50,10 +50,10 @@ function showModal(context,name,url) {
   if(context=='siteleavingpopup'){
       modalHtml='<div class="modal-body">'+
         'You are leaving inforanchi.in to an external website hosted by <strong>'+name+'</strong>. Contents of this site are not owned by inforanchi.in'+
-        '<br><br>Click continue if you are not automatically redirected.'+
+        '<br><br>Click continue to proceed.'+
       '</div>'+
       '<div class="modal-footer">'+
-	'<a class="btn btn-link" data-dismiss="modal">Stay on this page</a>&nbsp;'+
+	'<a class="btn btn-link" data-dismiss="modal" style="color:gray;font-size:12px">Stay on this page</a>&nbsp;'+
         '<a href='+url+' class="btn btn-secondary" data-dismiss="modal" onClick="modalOff();redirectExternal('+url+');">Continue</a>'+
       '</div>';
   }else{
