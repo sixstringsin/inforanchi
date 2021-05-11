@@ -39,6 +39,7 @@ function modaloff(){
 }
 function redirectExternal(url){
  sendtoga('outbound',url,'');
+ return true;
 // window.open(url, '_blank');
 }
 function showModal(context,name,url) {
