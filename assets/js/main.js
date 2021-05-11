@@ -35,7 +35,8 @@ function sendcontacttoga(){
 
 /*Show Disclaimer*/
 function modaloff(){
-	$('#dynamicModal').off('shown.bs.modal');
+$('#dynamicModal').modal('hide');	
+$('#dynamicModal').off('shown.bs.modal');
 }
 function redirectExternal(url){
  sendtoga('outbound',url,'');
