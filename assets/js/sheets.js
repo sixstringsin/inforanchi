@@ -13,9 +13,9 @@
 	  for (i = 0; i < str.length; i++) {
 		if(str[i]) {str[i]=str[i].trim();}
 		if(str[i].startsWith('http'))
-		   text += "<a onClick='sendcontacttoga();' target='_blank' href='"+str[i]+"'>"+str[i]+"</a>&nbsp;&nbsp;";
+		   text += "<a onClick='sendcontacttoga();' target='_blank' href='"+str[i]+"'><i class='icofont-web'></i>&nbsp;"+str[i]+"</a>&nbsp;&nbsp;";
 		else
-		   text += "<a onClick='sendcontacttoga();' href='tel:"+str[i].replace(/\D/g,'')+"'>"+str[i]+"</a>&nbsp;&nbsp;";
+		   text += "<a onClick='sendcontacttoga();' href='tel:"+str[i].replace(/\D/g,'')+"'><i class='icofont-phone'></i>&nbsp;"+str[i]+"</a>&nbsp;&nbsp;";
 	 }
 	}
 	  else{
