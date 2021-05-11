@@ -88,5 +88,5 @@ return table;
 }
 $(document).ready(function(){
    var table=readData($("#tablecontainer"));
-   table.DataTable({"paging": false});
+   table.DataTable({"paging": false, "aaSorting": []});
 });
