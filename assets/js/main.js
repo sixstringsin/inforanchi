@@ -54,7 +54,7 @@ function showModal(context,name,url) {
       '</div>'+
       '<div class="modal-footer">'+
 	'<a class="btn btn-link" data-dismiss="modal" style="color:gray;font-size:12px">Stay on this page</a>&nbsp;'+
-        '<a href='+url+' class="btn btn-secondary" data-dismiss="modal" onClick="modalOff();redirectExternal('+url+');">Continue</a>'+
+        '<a href='+url+' target="_blank" class="btn btn-secondary" onClick="modalOff();redirectExternal('+url+');">Continue</a>'+
       '</div>';
   }else{
 	modalHtml='<div class="modal-body">'+
